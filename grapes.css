@@ -14,35 +14,38 @@
 .cellpadding { padding:2px; }
 
 .header{
-    padding: 60px;
+    
     text-align: center;
      /*background: #1abc9c;*/
-     background: #2d2d2d;
-    color: white;
+     background: #6d597a;
+    color: #ded8dc;
 }
 .MainBg{
-    background: #2d2d2d;
+    background: #0f0f10;
 }
 
 .MenuItems{
     width: 25%;
     cursor: pointer;
-    background: #f8d031;
+    background: #e9c46a;
     color: #2d2d2d;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
     position: relative;
     align-items: center;
-    top: 100%;
-    border-right: #2d2d2d;
-    border-width: 2px;
-    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    bottom: -10px;  
 }
 
 .MenuItems:hover{
-    color: #70694b;
-    background: #fdd949d0;
+    color: #2d2d2d;
+    background-image: linear-gradient(to top, #f4a261 85%, #3b6778 65%);
 }
 .div{
-
+    vertical-align:middle;
     position: relative;
     align-items: center; 
 }
@@ -51,6 +54,32 @@
     align-items: center; 
 }
 body {
-    display:flex; flex-direction:column; justify-content:center;
-    min-height:100vh;
+    display:flex; 
+    flex-direction:column;
+    justify-content:center;
+    min-height: 1000 px;
+    background: #028090;
+    
+}
+.section{
+    align-items: center;
+    background: #00a896;
+}
+.p{
+    color: #d1c9c9;
+    text-align: center;
+    
+}
+.textCenter{
+    padding-left: 15%;
+    padding-right: 15%;
+   display:inline-table;
+ 
+   
+   width: fit-content;
+   vertical-align: middle; 
+   text-align: center; 
+   background-color: #e9c46a;
+
+
 }
