@@ -26,7 +26,6 @@
 
 .MenuItems{
     width: 25%;
-    margin-right: 2px;
     border-right: #2d2d2d;
     background: #f8d031;
     color: #2d2d2d;
@@ -37,4 +36,5 @@
 
 .MenuItems:hover{
     color: #70694b;
+    background: #fdd949d0;
 }
