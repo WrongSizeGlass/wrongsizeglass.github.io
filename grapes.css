@@ -26,12 +26,14 @@
 
 .MenuItems{
     width: 25%;
-    border-right: #2d2d2d;
+    
     background: #f8d031;
     color: #2d2d2d;
     position: relative;
     align-items: center;
     top: 100%;
+    border-right: #2d2d2d;
+    border-width: 2px;
 }
 
 .MenuItems:hover{
