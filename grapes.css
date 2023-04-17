@@ -35,6 +35,6 @@
     top: 100%;
 }
 
-.MenuItems.hover:hover{
+.MenuItems:hover{
     color: #70694b;
 }
