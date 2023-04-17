@@ -29,6 +29,8 @@
     padding-left: 5px;
     background: #f8d031;
     color: #2d2d2d;
+    position: relative;
+    top: 100%;
 }
 
 .MenuItems.hover:hover{
