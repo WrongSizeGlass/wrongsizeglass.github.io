@@ -29,5 +29,8 @@
     padding-left: 5px;
     background: #f8d031;
     color: #2d2d2d;
+}
 
+.MenuItems.hover:hover{
+    color: #70694b;
 }
