@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .center{ text-align:center; }
 .right{ text-align:right; }
 .pointer { cursor: pointer; }
@@ -13,21 +17,31 @@
 .hover:hover { background-color: #C1E5B7; }
 .cellpadding { padding:2px; }
 
-.header{
-    
+/*.header{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
      /*background: #1abc9c;*/
-     background: #6d597a;
+  /*   background: #6d597a;
     color: #ded8dc;
-}
+}*/
 .MainBg{
-    background: #0f0f10;
+    background: #283c55;
+    margin: 0px;
 }
 
 .MenuItems{
     width: 25%;
     cursor: pointer;
-    background: #e9c46a;
+    /*background: #e9c46a;*/
+    /*background:#ffd97d;
+    background: #f0c05a;*/
+    /*background:#f2ccb8;*/
+    /*background:#f0ce9e;*/
+   /* background: #b8bedd;*/
+   background: #f28482;
+    
     color: #2d2d2d;
     padding: 2px;
     padding-left: 4px;
@@ -37,7 +51,9 @@
     border-style: solid;
     border-width: 1px;
     border-color: #000000;
-    bottom: -10px;  
+    bottom: -20px;  
+   
+  
 }
 
 .MenuItems:hover{
@@ -54,11 +70,15 @@
     align-items: center; 
 }
 body {
-    display:flex; 
+    /*display:flex; 
     flex-direction:column;
     justify-content:center;
     min-height: 1000 px;
     background: #028090;
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
+    margin: 0;
     
 }
 .section{
@@ -70,16 +90,129 @@ body {
     text-align: center;
     
 }
-.textCenter{
-    padding-left: 15%;
-    padding-right: 15%;
-   display:inline-table;
- 
-   
-   width: fit-content;
-   vertical-align: middle; 
-   text-align: center; 
-   background-color: #e9c46a;
+.textCenter{ 
+    flex-direction: column;
+    width:100%;
+    vertical-align: middle; 
+    text-align: center; 
+    background-color: #e9c46a;
+}
+
+/*.main-container > div{
+    background: rgb(209, 209, 209);
+    color: white;
+    width: 100px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    display:table-cell;
+
+}*/
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    background: #028090;
+
+    grid-template:0.5fr 1fr 1fr 1fr 50px / 0.5fr 1fr 1fr 1fr 0.5fr ;
+}
+.main-container div{
+    padding-top: 20px;
+    padding-left: 20px;
+    border: 1px solid #000000;
+}
+
+.central-content{
+    grid-row-start: 0 ;
+    grid-row-end: span 2;
+    grid-column: 2 / span 3;
+    text-align: center;
+    min-height: fit-content;
+}
+.left-content{
+    
+    grid-column: 0 / span 2;
+    grid-row-start: 0 ;
+    grid-row-end: span 2;
+    
+    
+}
+.right-content{
+    grid-column: 5;
+    grid-row-start: 0 ;
+    grid-row-end: span 2;
+    padding-right: 5px;
+}
+
+.head{
+    background: #6d597a;
+    color: #ded8dc;
+    text-align: center;
+    grid-column-start: 0;
+    grid-column-end: 4;
+}
+.footer{
+    grid-column: 1 / span 5;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-self: center;
+    grid-template-areas:
+    " header header header header header  "
+    " filler-left contents contents contents filler-right "
+    " filler-left contents contents  contents filler-right "
+    " footer footer footer footer footer ";
+
+    flex-direction: column;
+    vertical-align: middle; 
+    text-align: center; 
+    
+}
 
 
+.header{
+    grid-area: header;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+     /*background: #1abc9c;*/
+      background: #6d597a;
+    color: #ded8dc;
+}
+.contents{
+    grid-area: contents;
+    text-align: left;
+    justify-items: left;
+    padding-top: 30px;
+    padding-left: 100px;
+    min-height: fit-content;
+    background-color: #f4bb71;
+}
+.filler-left{
+    grid-area: filler-left;
+    background-color: #f4bb71;
+}
+.filler-right{
+    grid-area: filler-right;
+    background-color: #f4bb71;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.footer{
+    grid-area: footer;
+    height:30px;
+    text-align: center;  
+    
+    padding-top: 15px;
+    background-color: #6d597a;
+    color: #d1c9c9;
 }
