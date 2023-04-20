@@ -268,10 +268,10 @@
     grid-area: img-grid1;
     display: grid;
     padding-top: 20px;
-    border: #0c5e11 solid 5px;
+    
     grid-template: 
-    " tl-img tr-img" 151px
-    " bl-img br-img" 150px
+    " tl-img tr-img" 152px
+    " bl-img br-img" 152px
     / 275px 275px ;   
 }
 
@@ -281,11 +281,13 @@
     grid-area: img-grid2;
     border: #d11616 solid 5px;
     display: grid;
+    padding-top: 20px;
+    margin-bottom: 2px;
     
     
     grid-template: 
-    " tl-img tr-img" 335px
-    " bl-img br-img" 335px
+    " tl-img tr-img" 336px
+    " bl-img br-img" 336px
     / 335px 335px ;
 
 }
@@ -293,11 +295,14 @@
 
 .tl-img{
     grid-area: tl-img;
-    margin-right: 1px;
+    margin-bottom: 2px;
+    border-bottom:#ffe14c solid 2px;
 }
 
 .tr-img{
     grid-area: tr-img;
+    margin-bottom: 2px;
+    border-bottom:#ffe14c solid 2px;
 }
 
 .bl-img{
