@@ -281,8 +281,8 @@
     grid-area: img-grid2;
     border: #d11616 solid 5px;
     display: grid;
-    padding-top: 20px;
-    margin-bottom: 2px;
+    padding-top: 10px;
+    
     
     
     grid-template: 
