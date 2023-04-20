@@ -272,7 +272,7 @@
     grid-template: 
     " tl-img tr-img" 152px
     " bl-img br-img" 152px
-    / 275px 275px ;   
+    / 300px 300px ;   
 }
 
 .img-grid2{
@@ -316,7 +316,7 @@
 }
 
 .wh-img{
-    width: 275px;
+    width: 300px;
     height: 150px;
 }
 .square-img{
