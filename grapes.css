@@ -56,7 +56,7 @@
     background: #e9d985;*/
    background: #f28482;
   
-    
+    z-index: 1;
     color: #2d2d2d;
     padding: 2px;
     padding-left: 4px;
@@ -66,7 +66,7 @@
     border-style: solid;
     border-width: 1px;
     border-color: #000000;
-    bottom: -17px;  
+    
 }
 
 .MenuItems:hover{
@@ -89,7 +89,7 @@
     vertical-align: middle; 
     text-align: center; */
     grid-template:            /* Height*/
-    " header header header  " 100px
+    " header header header  " 150px
     " content content content " 1fr
     " footer footer footer " 100px
     / 20% 1fr 15% ; /*Width*/ 
@@ -108,32 +108,28 @@
 
 .ragna-content-grid{
     grid-area: ragna-content-grid;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
-    
     min-height: fit-content;
-    border-color: #00e1ff ;
-    border-width: 2px;
-    border-style: solid;
-
+    font-size:20px;
+    color:#1e1d1d;
+    
     display: grid;
-    grid-template:            /* Height*/
-    " filler introTxt introTxt imgContainer  filler" 1fr
-   
-    /5% 1fr 1fr 1fr 5%; /*Width*/ 
+    grid-template:                   /* Height*/
+    ". left-text . img-grid2x2 ." 1fr 
+    / 15% 35% 4% 35% 10% ; /*Width*/ 
 
-    background-color: #953707;
+    background: linear-gradient(90deg, rgba(204,213,174,1) 4%, rgba(219,225,188,1) 8%, rgba(233,237,201,1) 50%, rgba(219,225,188,1) 92%, rgba(204,213,174,1) 96%);
 }
 .filler{
     grid-area: filler;
 }
 
-.introTxt{
+.left-text{
+    grid-area: left-text;
+    padding: 10px;
+   /* border: #196add solid 5px;*/
     
-    grid-area: introTxt;
-    justify-content: center;
-    background-color: #00e1ff;
-
 }
 
 .row2{
@@ -224,7 +220,7 @@
 .imgContainer{
     grid-area: imgContainer;
     position: relative;
-    justify-content: left;
+    
 }
 
 
@@ -251,33 +247,40 @@
 
 }
 
-.img-grid{
-    
-    justify-content: center;
-    grid-area: img-grid;
+.img-grid2x2{
+    position: relative;
+    grid-area: img-grid2x2;
     display: grid;
-    grid-template:            /* Height*/
-    " TL-img TR-img" 100px
-    " BL-img BR-img" 100px
-    / 200px 200px; /*Width*/ 
+    padding-top: 20px;
+    /*border: #04c711 solid 5px;*/
+    grid-template: /*Height*/
+    " TL-img TR-img" 151px
+    " BL-img BR-img" 150px
+    / 251px 250px; /*Width*/ 
 }
+
 .TL-img{
-    width: 200px; 
-    height: 100px;
-    justify-self: left;
+    grid-area: TL-img;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    width: 250px; 
+    height: 150px;  
 }
+
 .TR-img{
-    width: 200px; 
-    height: 100px;
-    justify-self: right;
+    grid-area: TR-img;
+    width: 250px; 
+    height: 150px;  
 }
+
 .BL-img{
-    width: 200px; 
-    height: 100px;
-    justify-self: left;
+    grid-area: BL-img;
+    width: 250px; 
+    height: 150px;   
 }
+
 .BR-img{
-    width: 200px; 
-    height: 100px;
-    justify-self: right;
+    grid-area: BR-img;
+    width: 250px; 
+    height: 150px;  
 }
