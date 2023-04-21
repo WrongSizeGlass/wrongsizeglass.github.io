@@ -224,6 +224,7 @@
     "fill-l center-text  center-text center-text fill-r" 100px
     "fill-l img-grid2 img-grid2 right-text fill-r" 750px
     "fill-l center-text2 center-text2 center-test2 fill-r" 100px
+    "fill-l video-grid video-grid video-grid fill-r" 750px
     /*"fill-l img-grid3 img-grid3 . fill-r" 400px*/
     / 1fr 35% 1fr 35% 1fr ; /*Width*/ 
     background: linear-gradient(90deg, rgba(204,213,174,1) 4%, rgba(219,225,188,1) 8%, rgba(233,237,201,1) 50%, rgba(219,225,188,1) 92%, rgba(204,213,174,1) 96%);
@@ -299,19 +300,58 @@
     " bl-img br-img" 336px
     / 335px 335px ;
 }
-.img-grid3{
-    
-    background: #ffecd5;
-    grid-area: img-grid2;
-    border: #a916d1 solid 5px;
-    display: grid;
-    padding-top: 10px;
-    margin-bottom: 2px;
+
+.video-grid{
+    grid-area: video-grid;
+    border: #ea68fb solid 5px;
+    background: #c2e4e5;
+    padding: 5px;
     grid-template: 
-    " tl-img tr-img" 236px
-    " bl-img br-img" 236px
-    / 235px 235px ;
+    " video-container r-text" 300px
+    " video-container r-text" 300px
+    " video-container r-text" 300px
+    / 30% 30% 30%;  
 }
+.r-text{
+    grid-area: r-text;
+    
+    border: #697e9b solid 5px;
+    height: 20%;
+    justify-self: right;
+    width: 20%;
+    justify-self: end;
+   
+
+}
+.video-container{
+    padding-left: 10px;
+    grid-area: video-container;
+    border: #06fd79 solid 5px;
+    height: 300px;
+    width: 40%;
+}
+
+.video-1{
+    grid-area: video-1;
+    border: #06fd79 solid 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.video-2{
+    grid-area: video-2;
+    border: #06e5f0 solid 5px;
+    height: 300px;
+    width: 300px;
+}
+
+.video-3{
+    grid-area: video-3;
+    border: #e6f603 solid 5px;
+    height: 300px;
+    width: 300px;
+}
+
 
 .tl-img{
     grid-area: tl-img;
