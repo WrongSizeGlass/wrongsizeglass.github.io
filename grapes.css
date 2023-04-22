@@ -220,22 +220,18 @@
     
     display: grid;
     grid-template:                   /* Height*/
-    "fill-l left-text img-grid1 img-grid1 fill-r" 350px 
+    "fill-l text-left img-grid1 img-grid1 fill-r" 350px 
     "fill-l center-text  center-text center-text fill-r" 100px
     "fill-l img-grid2 img-grid2 right-text fill-r" 750px
-    "fill-l center-text2 center-text2 center-test2 fill-r" 100px
-    "fill-l video-grid video-grid video-grid fill-r" 750px
+    "fill-l text-center text-center text-center fill-r" 100px
+    "fill-l video-grid video-grid video-grid fill-r" 1fr
     /*"fill-l img-grid3 img-grid3 . fill-r" 400px*/
     / 1fr 35% 1fr 35% 1fr ; /*Width*/ 
     background: linear-gradient(90deg, rgba(204,213,174,1) 4%, rgba(219,225,188,1) 8%, rgba(233,237,201,1) 50%, rgba(219,225,188,1) 92%, rgba(204,213,174,1) 96%);
     background: linear-gradient(90deg, rgba(250,237,205,1) 0%, rgba(250,237,205,1) 10%, rgba(254,250,224,1) 50%, rgba(244,244,213,1) 90%, rgba(233,237,201,1) 100%);
 }
 
-.left-text{
-    grid-area: left-text;
-    padding: 10px;
-    border: #196add solid 5px;
-}
+
 .right-text{
     grid-area: right-text;
     padding: 10px;
@@ -246,7 +242,16 @@
     text-align: center;
     padding: 10px;
     border: #16d148 solid 5px;
+    
 }
+/*
+
+While the goal of the prototype was to test the players cognitiv map of the city as mentioned earlier, it was desided to have basic game mechanics
+like basic movement, jump and the ability to through a hammer. <br>
+The hammer was added to have the players a more active gamemechanic. As a gameplay reward to the players for walking through the town. The player needed to defeat at boss at the end of the game, more on that later. <br> 
+To learn the player how to use the hammer and the bosses weak points which was icecrystals, two icecrystals was placed in the city with a spirit trapped inside of. Which the player needed to free.<b>
+
+*/
 
 .center-text2{
     grid-area: center-text2;
@@ -254,6 +259,18 @@
     justify-content: center;
     padding: 10px;
     border: #16d148 solid 5px;
+}
+
+.text-center{
+    grid-area: text-center;
+    border:solid;
+    display: flex;
+    grid-column: auto /span 1;
+    grid-row: auto/span 1;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+   
 }
 
 .fill-l {
@@ -273,7 +290,7 @@
     grid-area: fill-r;
 }
 
-
+/*  Media grids  */
 
 .img-grid1{
     
@@ -306,52 +323,46 @@
     border: #ea68fb solid 5px;
     background: #c2e4e5;
     padding: 5px;
+
+    display: grid;
     grid-template: 
-    " video-container r-text" 300px
-    " video-container r-text" 300px
-    " video-container r-text" 300px
-    / 30% 30% 30%;  
+    " text-left video-right " 1fr
+    " video-right text-left  " 1fr
+    " text-left video-right " 1fr
+    / 45% 1fr ;  
 }
-.r-text{
-    grid-area: r-text;
+.text-left{
+    /*grid-area: left-text;
+    padding: 10px;
+    border: #196add solid 5px;*/
+    grid-area: text-left;
+    border:solid;
+    display: flex;
+    grid-column: auto /span 1;
+    grid-row: auto/span 1;
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-top: 40px;
+
+
+}
+
+/*  Media classes  */
+
+.video-right{
+    margin: 5px;
+    grid-area: video-right;
+    border:solid;
+    display: flex;
+    grid-column: 2 / span 1 ;
+    grid-row: auto/span 1;
     
-    border: #697e9b solid 5px;
-    height: 20%;
-    justify-self: right;
-    width: 20%;
-    justify-self: end;
-   
-
-}
-.video-container{
-    padding-left: 10px;
-    grid-area: video-container;
-    border: #06fd79 solid 5px;
-    height: 300px;
-    width: 40%;
 }
 
-.video-1{
-    grid-area: video-1;
-    border: #06fd79 solid 5px;
-    height: 50px;
-    width: 50px;
+.video-size{
+    height: 350px;
+    width: 600px;   
 }
-
-.video-2{
-    grid-area: video-2;
-    border: #06e5f0 solid 5px;
-    height: 300px;
-    width: 300px;
-}
-
-.video-3{
-    grid-area: video-3;
-    border: #e6f603 solid 5px;
-    height: 300px;
-    width: 300px;
-}
-
 
 .tl-img{
     grid-area: tl-img;
@@ -367,12 +378,10 @@
 
 .bl-img{
     grid-area: bl-img;
-   
 }
 
 .br-img{
-    grid-area: br-img; 
-      
+    grid-area: br-img;   
 }
 
 .wh-img{
@@ -384,12 +393,3 @@
     height: 335px;
 }
 
-.grid-wh{
-    grid-template-columns: repeat(151,2);
-    grid-template-rows: repeat(251,2);
-}
-.grid-hw{
-
-    grid-template-columns: repeat(251,2);
-    grid-template-rows: repeat(151,2);
-}
