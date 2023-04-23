@@ -220,11 +220,11 @@
     
     display: grid;
     grid-template:                   /* Height*/
-    "fill-l text-left img-grid1 img-grid1 fill-r" 350px 
-    "fill-l center-text  center-text center-text fill-r" 100px
-    "fill-l img-grid2 img-grid2 right-text fill-r" 750px
-    "fill-l text-center text-center text-center fill-r" 100px
-    "fill-l video-grid video-grid video-grid fill-r" 1fr
+    "fill text-left img-grid1 img-grid1 fill-r" 350px 
+    "fill center-text  center-text center-text fill-r" 100px
+    "fill img-grid2 img-grid2 right-text fill-r" 750px
+    "header header header header header" 100px
+    " video-grid video-grid video-grid video-grid  video-grid" 1fr
     /*"fill-l img-grid3 img-grid3 . fill-r" 400px*/
     / 1fr 35% 1fr 35% 1fr ; /*Width*/ 
     background: linear-gradient(90deg, rgba(204,213,174,1) 4%, rgba(219,225,188,1) 8%, rgba(233,237,201,1) 50%, rgba(219,225,188,1) 92%, rgba(204,213,174,1) 96%);
@@ -263,15 +263,24 @@ To learn the player how to use the hammer and the bosses weak points which was i
 
 .text-center{
     grid-area: text-center;
+    text-align: center;
     border:solid;
     display: flex;
-    grid-column: auto /span 1;
-    grid-row: auto/span 1;
+    grid-column: 1/3;
+    grid-row: auto/span 2;
     padding: 10px;
-    text-align: center;
-    justify-content: center;
+    
+    justify-content: end;
    
 }
+
+.filler{
+    grid-area: filler;
+    background: #000000;
+    border: #fffcfc solid 5px;
+
+}
+
 
 .fill-l {
     grid-area: fill-l; 
@@ -323,13 +332,13 @@ To learn the player how to use the hammer and the bosses weak points which was i
     border: #ea68fb solid 5px;
     background: #c2e4e5;
     padding: 5px;
-
+    grid-template-columns: 10% 40% 40% 10%;
     display: grid;
     grid-template: 
-    " text-left video-right " 1fr
-    " video-right text-left  " 1fr
-    " text-left video-right " 1fr
-    / 45% 1fr ;  
+    "fill text-left video-right fill" 1fr
+    "fill video-right text-left  fill" 1fr
+    "fill text-left video-right fill" 1fr
+    / 1fr 1fr 1fr 1fr ;  
 }
 .text-left{
     /*grid-area: left-text;
@@ -338,14 +347,45 @@ To learn the player how to use the hammer and the bosses weak points which was i
     grid-area: text-left;
     border:solid;
     display: flex;
-    grid-column: auto /span 1;
-    grid-row: auto/span 1;
+    grid-column: 2 /span 1;
+    grid-row:span 1;
     padding-left: 50px;
     padding-right: 10px;
     padding-top: 40px;
-
-
 }
+
+.fill{
+    grid-area: fill;
+    background: #BBBBBB;
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.fl{
+    grid-area: fl;
+    background: #05fc2a;
+    grid-column: 1;
+    grid-row: span 1;
+    display: flex;
+    
+}
+.fl:nth-child(even){
+    background: #014f1d;
+}
+
+.fr{
+    grid-area: fr;
+    background: #02e1ff;
+    padding: 5%;
+    display: flex;
+    grid-column: 4;
+    grid-row: span 1;
+   
+}
+.fl:nth-child(even){
+    background: #2600fe;
+}
+
 
 /*  Media classes  */
 
@@ -354,8 +394,8 @@ To learn the player how to use the hammer and the bosses weak points which was i
     grid-area: video-right;
     border:solid;
     display: flex;
-    grid-column: 2 / span 1 ;
-    grid-row: auto/span 1;
+    grid-column: 3;
+    grid-row: auto;
     
 }
 
