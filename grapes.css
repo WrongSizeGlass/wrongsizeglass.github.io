@@ -61,6 +61,7 @@
     padding: 2px;
     padding-left: 4px;
     padding-right: 4px;
+    bottom: -5px;
     position: relative;
     align-items: center;
     border-style: solid;
@@ -100,10 +101,10 @@
     
 }*/
 .header{
-    padding-top: 10px;
+    padding-top: 20px;
     grid-area: header;
     position: relative;
-
+    font-size: 30px;
     background-color: #1e6091;
     background: rgb(39,2,62);
     background: #8e7dbe;
@@ -177,15 +178,6 @@
     
 }
 
-
-.filler-left{
-    grid-area: filler-left;
-    background-color: #99c1b9;
-}
-.filler-right{
-    grid-area: filler-right;
-    background-color: #99c1b9;
-}
 .sidebar{
     grid-area: sidebar;
 }
@@ -204,9 +196,9 @@
 .ragnarock-grid{
     display: grid;
     grid-template:            /* Height*/
-    " header header header  " 100px
+    " header header header  " 200px
     " ragna-content-grid ragna-content-grid ragna-content-grid" 1fr
-    " footer footer footer " 100px
+    " footer footer footer " 200px
     / 20% 1fr 15% ; /*Width*/ 
 }
 
@@ -220,83 +212,96 @@
     
     display: grid;
     grid-template:                   /* Height*/
-    "fill text-left img-grid1 img-grid1 fill-r" 350px 
-    "fill center-text  center-text center-text fill-r" 100px
-    "fill img-grid2 img-grid2 right-text fill-r" 750px
-    "header header header header header" 100px
+    "fill text img-grid1 img-grid1 fill-r" 15%
+    "fill sub-header  sub-header sub-header fill-r" 4%
+    "fill img-grid2 img-grid2 right-text fill-r" 30%
+    "fill header1 header1 header1 fill-r" 4%
     " video-grid video-grid video-grid video-grid  video-grid" 1fr
     /*"fill-l img-grid3 img-grid3 . fill-r" 400px*/
     / 1fr 35% 1fr 35% 1fr ; /*Width*/ 
-    background: linear-gradient(90deg, rgba(204,213,174,1) 4%, rgba(219,225,188,1) 8%, rgba(233,237,201,1) 50%, rgba(219,225,188,1) 92%, rgba(204,213,174,1) 96%);
-    background: linear-gradient(90deg, rgba(250,237,205,1) 0%, rgba(250,237,205,1) 10%, rgba(254,250,224,1) 50%, rgba(244,244,213,1) 90%, rgba(233,237,201,1) 100%);
+   
+    background: #cfe1b9;
+  
+}
+.ragnaStartBg{
+    background: #effbf3;
+     background: #cfe1b9;
+}
+
+.ragna-ld-header{
+    font:bold;
+    background: #b3979b;
+    background: #98cadc;
+
+}
+
+.ragnaLD{
+   background: #eae4e9;
+   background: #d6e9ff;
+
+}
+
+.ragnaGD{
+    background: #f5e8d8;
+    background: #f5eada;
+
+}
+.ragnaGD-fill{
+    background: #f2e5d6;
+    background: #e4dac9;
+}
+.ragna-gd-header{
+    font:bold;
+    background: #98cadc;
+    background: #f2b5b5;
+
+}
+.header1{
+    grid-area: header1;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / span 3;
+   
+}
+.text{
+    grid-area: text;
+
+}
+
+.text-left{
+
+    display: flex;
+    grid-column: 2 /span 1;
+    grid-row:span 1;
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-top: 40px;
 }
 
 
 .right-text{
     grid-area: right-text;
     padding: 10px;
-    border: #697e9b solid 5px;
+
+    grid-row: 3;
+    grid-template-columns: 4;
 }
-.center-text{
-    grid-area: center-text;
+.sub-header{
+    grid-area: sub-header;
     text-align: center;
-    padding: 10px;
-    border: #16d148 solid 5px;
-    
-}
-/*
-
-While the goal of the prototype was to test the players cognitiv map of the city as mentioned earlier, it was desided to have basic game mechanics
-like basic movement, jump and the ability to through a hammer. <br>
-The hammer was added to have the players a more active gamemechanic. As a gameplay reward to the players for walking through the town. The player needed to defeat at boss at the end of the game, more on that later. <br> 
-To learn the player how to use the hammer and the bosses weak points which was icecrystals, two icecrystals was placed in the city with a spirit trapped inside of. Which the player needed to free.<b>
-
-*/
-
-.center-text2{
-    grid-area: center-text2;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
-    border: #16d148 solid 5px;
-}
-
-.text-center{
-    grid-area: text-center;
-    text-align: center;
-    border:solid;
+    padding-top: 20px;
     display: flex;
-    grid-column: 1/3;
-    grid-row: auto/span 2;
-    padding: 10px;
-    
-    justify-content: end;
-   
+    justify-content: center;
+    grid-column: 2 / span 3;
+    grid-row:  span 1;
+    position: relative;
+    height: 100px;
 }
 
-.filler{
-    grid-area: filler;
-    background: #000000;
-    border: #fffcfc solid 5px;
-
-}
-
-
-.fill-l {
-    grid-area: fill-l; 
-    background: #ffecd5;
-    border: #121212 solid 5px;
-}
 .fill-r {
     grid-area: fill-r; 
-    background: #ffecd5;
-    border: #121212 solid 5px;
-}
-.fill-l div:only-child{
-    grid-area: fill-l;
-}
-.fill-r div:only-child{
-    grid-area: fill-r;
 }
 
 /*  Media grids  */
@@ -315,9 +320,7 @@ To learn the player how to use the hammer and the bosses weak points which was i
 
 .img-grid2{
     
-    background: #ffecd5;
     grid-area: img-grid2;
-    border: #d11616 solid 5px;
     display: grid;
     padding-top: 10px;
     margin-bottom: 2px;
@@ -329,8 +332,6 @@ To learn the player how to use the hammer and the bosses weak points which was i
 
 .video-grid{
     grid-area: video-grid;
-    border: #ea68fb solid 5px;
-    background: #c2e4e5;
     padding: 5px;
     grid-template-columns: 10% 40% 40% 10%;
     display: grid;
@@ -340,50 +341,19 @@ To learn the player how to use the hammer and the bosses weak points which was i
     "fill text-left video-right fill" 1fr
     / 1fr 1fr 1fr 1fr ;  
 }
-.text-left{
-    /*grid-area: left-text;
-    padding: 10px;
-    border: #196add solid 5px;*/
-    grid-area: text-left;
-    border:solid;
-    display: flex;
-    grid-column: 2 /span 1;
-    grid-row:span 1;
-    padding-left: 50px;
-    padding-right: 10px;
-    padding-top: 40px;
-}
 
 .fill{
     grid-area: fill;
-    background: #BBBBBB;
     grid-column: auto;
     grid-row: auto;
-}
-
-.fl{
-    grid-area: fl;
-    background: #05fc2a;
-    grid-column: 1;
-    grid-row: span 1;
     display: flex;
-    
 }
-.fl:nth-child(even){
-    background: #014f1d;
-}
-
-.fr{
-    grid-area: fr;
-    background: #02e1ff;
-    padding: 5%;
-    display: flex;
-    grid-column: 4;
-    grid-row: span 1;
+/*.fill:nth-child(2n) {
    
-}
-.fl:nth-child(even){
-    background: #2600fe;
+}*/
+fill::before{
+    counter-increment:div;
+    content:counter(div);
 }
 
 
@@ -392,15 +362,15 @@ To learn the player how to use the hammer and the bosses weak points which was i
 .video-right{
     margin: 5px;
     grid-area: video-right;
-    border:solid;
     display: flex;
     grid-column: 3;
     grid-row: auto;
+    padding-left: 5%;
     
 }
 
 .video-size{
-    height: 350px;
+    height: 400px;
     width: 600px;   
 }
 
