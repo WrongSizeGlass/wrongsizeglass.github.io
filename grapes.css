@@ -216,8 +216,8 @@ Yellow grey fill bg
     display: grid;
     grid-template: 
     "fill imgContainer aboutMe fill-r" 400px /* height */
-    " fill text img-grid-right fill-r" 1fr
-    /  10% 33% 1fr 10%; /* width*/
+    " fill text img-thumbnail-grid fill-r" 1fr
+    /  20% 1fr 1fr 20%; /* width*/
 
     /* Good colors but not good to text mainly greenish
     background: linear-gradient(90deg, rgba(83,141,34,1) 0%, rgba(115,169,66,1) 15%, rgba(170,213,118,1) 50%, rgba(115,169,66,1) 85%, rgba(83,141,34,1) 100%);
@@ -264,18 +264,34 @@ Yellow grey fill bg
 
 /*  Media grids  */
 
+.img-thumbnail-grid{
+    grid-area: img-thumbnail-grid;
+    display: grid;
+    
+ 
+    grid-template: 
+    " img-grid-right" 300px
+
+    " img-grid-right" 300px
+    
+    " img-grid-right" 300px
+    
+    / 600px ; 
+}
+
+
 .img-grid-right{
     grid-area: img-grid-right;
     display: grid;
-    grid-row: 2;
-    grid-column: 3;
-    padding-top: 1%;
-    grid-template: 
-    " tl-img tr-img" 142px
-    " bl-img br-img" 142px
-    / 300px 300px ; 
-}
+    grid-row: auto/span 1;
 
+    grid-template: 
+    " tl-img tr-img" 138px
+    " bl-img br-img" 138px
+    " .           ."  24px
+    / 300px 300px ; 
+    
+}
 
 .img-grid1{
     
@@ -334,13 +350,13 @@ Yellow grey fill bg
 .tl-img{
     grid-area: tl-img;
     margin-bottom: 2px;
-    border-bottom:#ffe14c solid 2px;
+   
 }
 
 .tr-img{
     grid-area: tr-img;
     margin-bottom: 2px;
-    border-bottom:#ffe14c solid 2px;
+   
 }
 
 .bl-img{
@@ -353,7 +369,7 @@ Yellow grey fill bg
 
 .wh-img{
     width: 300px;
-    height: 140px;
+    height: 138px;
 }
 .square-img{
     width: 300px;
