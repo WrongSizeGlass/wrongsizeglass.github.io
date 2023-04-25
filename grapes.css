@@ -17,45 +17,40 @@
 .borderright { border-right: #999999 1px solid; }
 .hover:hover { background-color: #C1E5B7; }
 .cellpadding { padding:2px; }
-
-/*.header{
+.div{
+    vertical-align:middle;
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-     /*background: #1abc9c;*/
-  /*   background: #6d597a;
-    color: #ded8dc;
-}*/
-.MainBg{
-    
-    background: #03346f;
-    
-    
-    
-    background: #143601;
-    background-color: #99c1b9;
-    margin: 0px;
-
-    background: #036666;
-    background: #036666;
-    background:#2c3a4e ;
-    background: #283c55;
-    background: #142233;
+    align-items: center; 
 }
+.h1{
+    position: relative;
+    align-items: center;    
+}
+
+
+/*@media screen and (min-width:736px) {
+    
+}*/
+
+/*
+Yellow grey text bg
+background: #f5eada;
+background: #f5e8d8
+
+Yellow grey fill bg
+ background: #e4dac9;
+ background: #f2e5d6;
+*/
+
+
+
+
+/*  Grid elements */
 
 .MenuItems{
     width: 25%;
     cursor: pointer;
-    /*background: #e9c46a;*/
-    /*background:#ffd97d;
-    background: #f0c05a;*/
-    /*background:#f2ccb8;*/
-    /*background:#f0ce9e;*/
-   /* background: #b8bedd;
-    background: #e9d985;*/
-   background: #f28482;
-  
+    background: #f28482;
     z-index: 1;
     color: #2d2d2d;
     padding: 2px;
@@ -74,38 +69,14 @@
     color: #2d2d2d;
     background-image: linear-gradient(to top,   rgba(233,237,201,1) 80%, #6b2c89 65%);
 }
-.div{
-    vertical-align:middle;
-    position: relative;
-    align-items: center; 
-}
-.h1{
-    position: relative;
-    align-items: center;    
-}
 
-.main-grid{
-    display: grid;
-    /*flex-direction: column;
-    vertical-align: middle; 
-    text-align: center; */
-    grid-template:            /* Height*/
-    " header header header  " 150px
-    " content content content " 1fr
-    " footer footer footer " 100px
-    / 20% 1fr 15% ; /*Width*/ 
-     
-}
 
-/*@media screen and (min-width:736px) {
-    
-}*/
 .header{
-    padding-top: 20px;
+    padding-top: 10px;
     grid-area: header;
     position: relative;
     font-size: 30px;
-    background-color: #1e6091;
+    /*background-color: #1e6091;
     background: rgb(39,2,62);
     background: #8e7dbe;
     background-color: #4a7c59;
@@ -115,40 +86,15 @@
     background: #6b2c89;
 
     background: linear-gradient(90deg, rgba(39,2,62,1) 9%, rgba(104,36,149,1) 42%, rgba(120,61,158,1) 100%);
-    background: #14746f;
+    
+    background-color: #4a7c59;*/
     text-align: center;
-    color: #cfccce;
+    color: #e2dfe1;
 }
-.content{
-    grid-area: content;
-    padding-top: 20px;
-    padding-left: 30px;
-    min-height: fit-content;
-    font-size: 15px;
-    color: #1e1d1d;
-    display: grid;
-    grid-template: 
-    " imgContainer aboutMe" 1fr /* height */
-    /   30% 40%; /* width*/
-
-    /* Good colors but not good to text mainly greenish
-    background: linear-gradient(90deg, rgba(83,141,34,1) 0%, rgba(115,169,66,1) 15%, rgba(170,213,118,1) 50%, rgba(115,169,66,1) 85%, rgba(83,141,34,1) 100%);
-    background: linear-gradient(90deg, rgba(26,117,159,1) 0%, rgba(82,182,154,1) 10%, rgba(52,160,164,1) 50%, rgba(82,182,154,1) 90%, rgba(26,117,159,1) 100%);*/
-    /* good grey */
-    /* background-color: #b6b6b6;*/
-    /* good Yellow */
-    /*background-color: #f4bb71;*/
-    /*good green for light purple*/
-    /*background-color: #06b178;*/
-
-   background: linear-gradient(90deg, rgba(204,213,174,1) 4%, rgba(219,225,188,1) 8%, rgba(233,237,201,1) 50%, rgba(219,225,188,1) 92%, rgba(204,213,174,1) 96%);
-   
-}
-
 
 .footer{
     grid-area: footer;
-    height:50px;
+   
     text-align: center;  
     padding-top: 25px;
     
@@ -164,9 +110,16 @@
     /*background: linear-gradient(90deg, rgba(120,61,158,1) 9%, rgba(104,36,149,1) 42%, rgba(39,2,62,1) 100%);*/
     background: #14746f;
     color: #ded8dc;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    bottom: 0%;
+    font-size: 25px;
+
 }
 .aboutMe{
-    padding: 10px;
+    padding: 20px;
+    font: 30px;
     grid-area: aboutMe;
     justify-content: center;
     
@@ -193,13 +146,101 @@
 
 }
 
+.header1{
+    grid-area: header1;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / span 3; 
+}
+
+.text{
+    grid-area: text;
+}
+
+.text-left{
+
+    display: flex;
+    grid-column: 2 /span 1;
+    grid-row:span 1;
+    padding-top: 10%;
+    padding-left: 25%;
+}
+
+.text-right{
+    grid-area: text-right;
+    
+}
+
+.sub-header{
+    grid-area: sub-header;
+    text-align: center;
+    padding-top: 35px;
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / span 3;
+    grid-row:  span 1;
+    position: relative; 
+}
+
+.fill-r {
+    grid-area: fill-r; 
+}
+.fill{
+    grid-area: fill;
+    grid-column: auto;
+    grid-row: auto / span 1;
+    display: flex;
+    
+}
+
+/* Grids  */
+
+.main-grid{
+    display: grid;
+    grid-template:       /* Height*/
+    " header header header  " 150px
+    " homepage-content-grid homepage-content-grid homepage-content-grid " 1fr
+    " footer footer footer " 150px
+    / 20% 1fr 15% ;         /*Width*/ 
+     
+}
+.homepage-content-grid{
+    grid-area: homepage-content-grid;
+    padding-top: 2.5%;
+    padding-left: 30px;
+    min-height: fit-content;
+    font-size: 15px;
+    color: #1e1d1d;
+    display: grid;
+    grid-template: 
+    "fill imgContainer aboutMe fill-r" 400px /* height */
+    " fill text img-grid-right fill-r" 1fr
+    /  10% 33% 1fr 10%; /* width*/
+
+    /* Good colors but not good to text mainly greenish
+    background: linear-gradient(90deg, rgba(83,141,34,1) 0%, rgba(115,169,66,1) 15%, rgba(170,213,118,1) 50%, rgba(115,169,66,1) 85%, rgba(83,141,34,1) 100%);
+    background: linear-gradient(90deg, rgba(26,117,159,1) 0%, rgba(82,182,154,1) 10%, rgba(52,160,164,1) 50%, rgba(82,182,154,1) 90%, rgba(26,117,159,1) 100%);*/
+    /* good grey */
+    /* background-color: #b6b6b6;*/
+    /* good Yellow */
+    /*background-color: #f4bb71;*/
+    /*good green for light purple*/
+    /*background-color: #06b178;*/
+
+   background: linear-gradient(90deg, rgba(204,213,174,1) 4%, rgba(219,225,188,1) 8%, rgba(233,237,201,1) 50%, rgba(219,225,188,1) 92%, rgba(204,213,174,1) 96%);
+   
+}
+
+
 .ragnarock-grid{
     display: grid;
-    grid-template:            /* Height*/
+    grid-template:        /* Height*/
     " header header header  " 200px
     " ragna-content-grid ragna-content-grid ragna-content-grid" 1fr
     " footer footer footer " 200px
-    / 20% 1fr 15% ; /*Width*/ 
+    / 20% 1fr 15% ;         /*Width*/ 
 }
 
 .ragna-content-grid{
@@ -212,99 +253,29 @@
     
     display: grid;
     grid-template:                   /* Height*/
-    "fill text img-grid1 img-grid1 fill-r" 15%
-    "fill sub-header  sub-header sub-header fill-r" 4%
+    "fill text img-grid1 img-grid1 fill-r" 20%
+    "fill sub-header  sub-header sub-header fill-r" 5%
     "fill img-grid2 img-grid2 right-text fill-r" 30%
-    "fill header1 header1 header1 fill-r" 4%
+    "fill header1 header1 header1 fill-r" 5%
     " video-grid video-grid video-grid video-grid  video-grid" 1fr
-    /*"fill-l img-grid3 img-grid3 . fill-r" 400px*/
-    / 1fr 35% 1fr 35% 1fr ; /*Width*/ 
-   
-    background: #cfe1b9;
-  
-}
-.ragnaStartBg{
-    background: #effbf3;
-     background: #cfe1b9;
+    / 1fr 35% 1fr 35% 1fr ;           /*Width*/ 
 }
 
-.ragna-ld-header{
-    font:bold;
-    background: #b3979b;
-    background: #98cadc;
-
-}
-
-.ragnaLD{
-   background: #eae4e9;
-   background: #d6e9ff;
-
-}
-
-.ragnaGD{
-    background: #f5e8d8;
-    background: #f5eada;
-
-}
-.ragnaGD-fill{
-    background: #f2e5d6;
-    background: #e4dac9;
-}
-.ragna-gd-header{
-    font:bold;
-    background: #98cadc;
-    background: #f2b5b5;
-
-}
-.header1{
-    grid-area: header1;
-    text-align: center;
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    grid-column: 2 / span 3;
-   
-}
-.text{
-    grid-area: text;
-
-}
-
-.text-left{
-
-    display: flex;
-    grid-column: 2 /span 1;
-    grid-row:span 1;
-    padding-left: 50px;
-    padding-right: 10px;
-    padding-top: 40px;
-}
-
-
-.right-text{
-    grid-area: right-text;
-    padding: 10px;
-
-    grid-row: 3;
-    grid-template-columns: 4;
-}
-.sub-header{
-    grid-area: sub-header;
-    text-align: center;
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    grid-column: 2 / span 3;
-    grid-row:  span 1;
-    position: relative;
-    height: 100px;
-}
-
-.fill-r {
-    grid-area: fill-r; 
-}
 
 /*  Media grids  */
+
+.img-grid-right{
+    grid-area: img-grid-right;
+    display: grid;
+    grid-row: 2;
+    grid-column: 3;
+    padding-top: 1%;
+    grid-template: 
+    " tl-img tr-img" 142px
+    " bl-img br-img" 142px
+    / 300px 300px ; 
+}
+
 
 .img-grid1{
     
@@ -323,17 +294,17 @@
     grid-area: img-grid2;
     display: grid;
     padding-top: 10px;
-    margin-bottom: 2px;
+    
     grid-template: 
-    " tl-img tr-img" 336px
-    " bl-img br-img" 336px
-    / 335px 335px ;
+    " tl-img tr-img" 300px
+    " bl-img br-img" 300px
+    / 300px 300px ;
 }
 
 .video-grid{
     grid-area: video-grid;
-    padding: 5px;
-    grid-template-columns: 10% 40% 40% 10%;
+    
+    grid-template-columns: 10% 1fr 1fr 10%;
     display: grid;
     grid-template: 
     "fill text-left video-right fill" 1fr
@@ -342,36 +313,22 @@
     / 1fr 1fr 1fr 1fr ;  
 }
 
-.fill{
-    grid-area: fill;
-    grid-column: auto;
-    grid-row: auto;
-    display: flex;
-}
-/*.fill:nth-child(2n) {
-   
-}*/
-fill::before{
-    counter-increment:div;
-    content:counter(div);
-}
-
 
 /*  Media classes  */
 
 .video-right{
-    margin: 5px;
+    
     grid-area: video-right;
     display: flex;
     grid-column: 3;
     grid-row: auto;
     padding-left: 5%;
-    
+    padding-top: 50px; 
 }
 
 .video-size{
-    height: 400px;
-    width: 600px;   
+    height: 300px;
+    width: 500px;   
 }
 
 .tl-img{
@@ -396,10 +353,85 @@ fill::before{
 
 .wh-img{
     width: 300px;
-    height: 150px;
+    height: 140px;
 }
 .square-img{
-    width: 335px;
-    height: 335px;
+    width: 300px;
+    height: 300px;
 }
 
+/* Color Classes  */
+/*.MainBg{
+    
+    background: #03346f;
+    
+    
+    
+    background: #143601;
+    background-color: #99c1b9;
+    margin: 0px;
+
+    background: #036666;
+    background: #036666;
+    background:#2c3a4e ;
+    background: #283c55;
+    background: #142233;
+}*/
+
+.start-fill-l{
+    background: linear-gradient(90deg, rgba(192,209,171,1) 98.75%, rgba(238,251,224,1) 100%);
+}
+.start-fill-r{
+    background: linear-gradient(90deg, rgba(238,251,224,1) 0%, rgba(192,209,171,1) 1.25%);  
+}
+
+.lBlue-header{
+    font:bold;
+    background: linear-gradient(180deg, rgba(238,251,224,1) 0%, rgba(152,202,220,1) 1.25%, rgba(152,202,220,1) 98.25%, rgba(227,239,255,1) 100%);
+}
+.lBlue-header-fill{
+    background: linear-gradient(180deg, rgba(192,209,171,1) 0%, rgba(152,202,220,1) 1.25%, rgba(152,202,220,1) 98.25%, rgba(189,212,238,1) 100%); 
+}
+.lBlue-fill-l{
+    background: linear-gradient(90deg, rgb(227, 237, 250) 98.75%, rgba(227,239,255,1) 100%);
+}
+.lBlue-fill-r{
+/*background: linear-gradient(90deg, rgba(227,239,255,1) 0%, rgba(189,212,238,1) 1.25%);*/
+background: linear-gradient(90deg, rgba(227,239,255,1) 0%, rgba(227, 237, 250) 1.25%);
+}
+
+.text-bg{
+     background: #fefefa;
+     background: #f5ebe0;
+}
+
+.lRed-header{
+    font:bold;
+    background: #98cadc;
+    background: #f2b5b5;
+    
+    background: #e4c4a5;
+    background: #ff9970;
+    background: #f2b5b5;
+    background: linear-gradient(180deg, rgba(189,212,238,1) 0%, rgba(242,181,181,1) 2%, rgba(242,181,181,1) 98%, rgba(252,231,231,1) 100%);
+    background: #a9b6c9;
+    background: #cdb4db;
+    background: #dec8e5;
+   
+}
+
+
+.lRed-header-fill{
+    background: linear-gradient(180deg, rgba(189,212,238,1) 0%, rgba(242,181,181,1) 2%, rgba(242,181,181,1) 98%, rgba(252,231,231,1) 100%);
+   background: #dec8e5;
+ 
+}
+.lRed-fill-l{
+   /* background: linear-gradient(90deg, rgba(254,207,207,1) 98%, rgba(252,231,231,1) 100%);*/
+    background: linear-gradient(90deg, rgba(254, 221, 221,1) 98%, rgba(252,231,231,1) 100%);
+    background: #f0d6e4;
+}
+.lRed-fill-r{
+    background: linear-gradient(90deg, rgba(252,231,231,1) 0%, rgba(254, 221, 221,1) 1.25%);
+    background: #f0d6e4;
+}
