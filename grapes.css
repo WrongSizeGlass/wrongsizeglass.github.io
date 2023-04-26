@@ -297,6 +297,7 @@ Yellow grey fill bg
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
     "fill text-left imgContainer-r fill-r" 1fr
     "what-is what-is what-is what-is" 1fr
+    " core core core core"
 
     / 10% 1fr 1fr 15%    
     ;
@@ -313,9 +314,23 @@ Yellow grey fill bg
     / 10% 1fr 1fr 1fr 10% ;
 }
 
+.pillers{
+
+}
+.values{
+
+}
+
 .core{
     grid-area: core;
     display: grid;
+    grid-template:
+    "fill text text text fill-r"
+    "fill pillers . . fill-r"
+    "fill text-left text-left . fill-r"
+    "fill symbols . . fill-r"
+    "fill text-right text-right . fill-r"
+    ;
     /*
     My role, what I have done
     Design pillers design values
