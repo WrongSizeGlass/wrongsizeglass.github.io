@@ -115,7 +115,6 @@ Yellow grey fill bg
     width: 100%;
     bottom: 0%;
     font-size: 25px;
-
 }
 .aboutMe{
     padding: 20px;
@@ -137,6 +136,9 @@ Yellow grey fill bg
     grid-column: 2;
     grid-row: auto ;
     display: flex;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
 }
 .imgContainer-r{
     border: #1f44fd solid;
@@ -187,7 +189,7 @@ Yellow grey fill bg
     grid-column: 2 /span 1;
     grid-row:span 1;
     padding-top: 10%;
-    padding-left: 25%;
+    
 }
 
 .text-right{
@@ -294,14 +296,24 @@ Yellow grey fill bg
     
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
     "fill text-left imgContainer-r fill-r" 1fr
-    "fill imgContainer text-right fill-r" 1fr
+    "about-game about-game about-game about-game" 1fr
 
     / 15% 1fr 1fr 15%    
     ;
     min-height: 400px;
 }
 
+.about-game{
+    grid-area: about-game;
+    display: grid;
+    grid-template: /* design - lvl1 - lvl2 - lvl3*/
+    "fill Title . .  fill-r" 100px 
+    "fill imgContainer imgContainer imgContainer fill-r" 1fr
+    "fill text-left text text-right fill-r" 1fr
 
+    / 15% 1fr 1fr 1fr 15%    
+    ;
+}
 
 
 
