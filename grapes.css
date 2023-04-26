@@ -296,24 +296,35 @@ Yellow grey fill bg
     
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
     "fill text-left imgContainer-r fill-r" 1fr
-    "about-game about-game about-game about-game" 1fr
+    "what-is what-is what-is what-is" 1fr
 
-    / 15% 1fr 1fr 15%    
+    / 10% 1fr 1fr 15%    
     ;
     min-height: 400px;
 }
 
-.about-game{
-    grid-area: about-game;
+.what-is{
+    grid-area: what-is;
     display: grid;
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
     "fill title title title  fill-r" 100px 
     "fill imgContainer imgContainer-c imgContainer-r fill-r" 1fr
     "fill text-left text text-right fill-r" 100px
-
-    / 10% 1fr 1fr 1fr 10%    
-    ;
+    / 10% 1fr 1fr 1fr 10% ;
 }
+
+.core{
+    grid-area: core;
+    display: grid;
+    /*
+    My role, what I have done
+    Design pillers design values
+    Game Loop img
+    player motivation and progress
+    
+    */
+}
+
 .title{    
     grid-area: title;
 }
