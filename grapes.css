@@ -133,7 +133,7 @@ Yellow grey fill bg
     grid-area: imgContainer;
     position: relative;
     grid-area: fill;
-    grid-column: 2;
+    grid-column: auto;
     grid-row: auto ;
     display: flex;
     vertical-align: top;
@@ -145,7 +145,7 @@ Yellow grey fill bg
     grid-area: imgContainer-r;
     position: relative;
     grid-area: fill;
-    grid-column: 3;
+    grid-column: auto;
     grid-row: auto ;
     display: flex;
 }
@@ -307,15 +307,23 @@ Yellow grey fill bg
     grid-area: about-game;
     display: grid;
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
-    "fill Title . .  fill-r" 100px 
-    "fill imgContainer imgContainer imgContainer fill-r" 1fr
-    "fill text-left text text-right fill-r" 1fr
+    "fill title title title  fill-r" 100px 
+    "fill imgContainer imgContainer-c imgContainer-r fill-r" 1fr
+    "fill text-left text text-right fill-r" 100px
 
-    / 15% 1fr 1fr 1fr 15%    
+    / 10% 1fr 1fr 1fr 10%    
     ;
 }
-
-
+.title{    
+    grid-area: title;
+}
+.one-sentece{
+    font-size: 25; 
+    font-weight: 150; 
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 5%;
+}
 
 .ragnarock-grid{
     display: grid;
