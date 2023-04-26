@@ -76,7 +76,7 @@ Yellow grey fill bg
     grid-area: header;
     position: relative;
     font-size: 30px;
-    /*background-color: #1e6091;
+    background-color: #1e6091;
     background: rgb(39,2,62);
     background: #8e7dbe;
     background-color: #4a7c59;
@@ -87,9 +87,9 @@ Yellow grey fill bg
 
     background: linear-gradient(90deg, rgba(39,2,62,1) 9%, rgba(104,36,149,1) 42%, rgba(120,61,158,1) 100%);
     
-    background-color: #4a7c59;*/
+    background-color: #4a7c59;
     text-align: center;
-    color: #e2dfe1;
+    color: #e9dfe8;
 }
 
 .footer{
@@ -130,9 +130,22 @@ Yellow grey fill bg
 
 
 .imgContainer{
+    border: #00ff55 solid;
     grid-area: imgContainer;
     position: relative;
-    
+    grid-area: fill;
+    grid-column: 2;
+    grid-row: auto ;
+    display: flex;
+}
+.imgContainer-r{
+    border: #1f44fd solid;
+    grid-area: imgContainer-r;
+    position: relative;
+    grid-area: fill;
+    grid-column: 3;
+    grid-row: auto ;
+    display: flex;
 }
 
 .sidebar{
@@ -161,10 +174,15 @@ Yellow grey fill bg
 
 .text{
     grid-area: text;
+ 
+    grid-column: auto;
+    grid-row: auto ;
+    display: flex;
 }
 
 .text-left{
-
+    border: #ff6200 solid;
+    grid-area: text-left;
     display: flex;
     grid-column: 2 /span 1;
     grid-row:span 1;
@@ -173,7 +191,12 @@ Yellow grey fill bg
 }
 
 .text-right{
+    border: #ff0202 solid;
     grid-area: text-right;
+    grid-area: fill;
+    grid-column: auto;
+    grid-row: auto ;
+    display: flex;
     
 }
 
@@ -189,14 +212,16 @@ Yellow grey fill bg
 }
 
 .fill-r {
+    border: #7c7b7b solid;
     grid-area: fill-r; 
     grid-column: auto;
     grid-row: auto ;
     display: flex;
 }
 .fill{
+    border: #000000 solid;
     grid-area: fill;
-    grid-column: auto;
+    grid-column: 1;
     grid-row: auto ;
     display: flex;
     
@@ -242,10 +267,42 @@ Yellow grey fill bg
     /*background-color: #f4bb71;*/
     /*good green for light purple*/
     /*background-color: #06b178;*/
-
-   
-   
 }
+
+.game-grid{
+    display: grid;
+    grid-template: 
+    /*" fill overview imgContainer fill-r"
+    " fill imgContainer involvement fill-r "
+    " fill design-text loop-img fill-r"
+    " fill lvl1 imgContainer fill-r"
+    " fill lvl2 imgContainer fill-r"
+    " fill lvl3 imgContainer fill-r"
+    ;*/
+    " game-content game-content game-content game-content" 1fr
+    " game-content game-content game-content game-content" 1fr
+    " game-content game-content game-content game-content" 1fr
+    " game-content game-content game-content game-content" 1fr
+    / 15% 1fr 1fr 15% ;
+    min-height: 200px;
+}
+
+.game-content{
+    grid-area: game-content;
+    display: grid;
+    grid-row: auto / span 1;
+    
+    grid-template: /* design - lvl1 - lvl2 - lvl3*/
+    "fill text-left imgContainer-r fill-r" 1fr
+    "fill imgContainer text-right fill-r" 1fr
+
+    / 15% 1fr 1fr 15%    
+    ;
+    min-height: 400px;
+}
+
+
+
 
 
 .ragnarock-grid{
