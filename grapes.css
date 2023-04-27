@@ -295,7 +295,7 @@ Yellow grey fill bg
     grid-row: auto / span 1;
     
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
-    "fill text-left imgContainer-r fill-r" 1fr
+    "fill text-left imgContainer-r fill-r" 550px
     "game-what-is game-what-is game-what-is game-what-is" 400px
     "game-content game-content game-content game-content" 1fr
     "game-core game-core game-core game-core" 1fr
@@ -340,14 +340,32 @@ Yellow grey fill bg
 .game-content{
     grid-area: game-content;
     display: grid;
+    grid-column:10% 1fr 1fr 1fr 10% ;
     grid-template:
     "fill imgContainer text-left text-left fill-r" 1fr
-    "fill imgContainer-c text text fill-r" 1fr
+    "fill text text imgContainer-c fill-r" 1fr
     "fill imgContainer-r text-right text-right fill-r" 1fr
+    / 10% 1fr 1fr 1fr 10% ;
+    overflow: hidden;
+}
+
+.lvl1{
+    grid-area: lvl1;
+    display: grid;
+    grid-template:
+    "fill imgContainer text-left text-left fill-r" 1fr
     / 10% 1fr 1fr 1fr 10% ;
 }
 
-
+.nested-img-grids{
+    grid-area: nested-img-grids;
+    display: grid;
+    grid-template:
+    " fill imgContainer-c imgContainer-c img-grid1 fill-r" 400px
+    " fill img-1x2-grid text-left text-left fill-r" 400px
+ 
+    / 10% 1fr 1fr 1fr 10% ;
+}
 
 
 /*
@@ -469,8 +487,8 @@ Pillars
     padding-top: 20px;
     
     grid-template: 
-    " tl-img tr-img" 152px
-    " bl-img br-img" 152px
+    " tl-img tr-img" 200px
+    " bl-img br-img" 200px
     / 300px 300px ;   
 }
 
@@ -482,6 +500,16 @@ Pillars
     
     grid-template: 
     " tl-img tr-img" 300px
+    " bl-img br-img" 300px
+    / 300px 300px ;
+}
+
+.img-1x2-grid{
+    grid-area: img-1x2-grid;
+    display: grid;
+    padding-top: 10px;   
+    grid-template: 
+    " tl-img ." 300px
     " bl-img br-img" 300px
     / 300px 300px ;
 }
