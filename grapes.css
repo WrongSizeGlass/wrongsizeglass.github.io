@@ -186,7 +186,7 @@ Yellow grey fill bg
     border: #ff6200 solid;
     grid-area: text-left;
     display: flex;
-    grid-column: 2 /span 1;
+    grid-column: 2 /span auto;
     grid-row:span 1;
     padding-top: 10%;
     
@@ -342,8 +342,8 @@ Yellow grey fill bg
     display: grid;
     grid-template:
     "fill imgContainer text-left text-left fill-r" 1fr
-    "fill text text text fill-r" 1fr
-    "fill text-right text-right text-right fill-r" 1fr
+    "fill imgContainer-c text text fill-r" 1fr
+    "fill imgContainer-r text-right text-right fill-r" 1fr
     / 10% 1fr 1fr 1fr 10% ;
 }
 
