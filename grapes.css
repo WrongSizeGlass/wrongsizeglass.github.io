@@ -289,16 +289,16 @@ Yellow grey fill bg
     min-height: 200px;
 }
 
-.game-content{
-    grid-area: game-content;
+.game-page{
+    grid-area: game-page;
     display: grid;
     grid-row: auto / span 1;
     
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
     "fill text-left imgContainer-r fill-r" 1fr
-    "what-is what-is what-is what-is" 400px
-    "content content content content" 1fr
-    " core core core core" 1fr
+    "game-what-is game-what-is game-what-is game-what-is" 400px
+    "game-content game-content game-content game-content" 1fr
+    "game-core game-core game-core game-core" 1fr
    
 
     / 10% 1fr 1fr 15%    
@@ -306,8 +306,8 @@ Yellow grey fill bg
     min-height: 400px;
 }
 
-.what-is{
-    grid-area: what-is;
+.game-what-is{
+    grid-area: game-what-is;
     display: grid;
     grid-template: /* design - lvl1 - lvl2 - lvl3*/
     "fill title title title  fill-r" 100px 
@@ -316,8 +316,8 @@ Yellow grey fill bg
     / 10% 1fr 1fr 1fr 10% ;
 }
 
-.core{
-    grid-area: core;
+.game-core{
+    grid-area: game-core;
     display: grid;
     grid-template:
    
@@ -337,11 +337,11 @@ Yellow grey fill bg
     */
 }
 
-.content{
-    grid-area: content;
+.game-content{
+    grid-area: game-content;
     display: grid;
     grid-template:
-    "fill text-left text-left text-left fill-r" 1fr
+    "fill imgContainer text-left text-left fill-r" 1fr
     "fill text text text fill-r" 1fr
     "fill text-right text-right text-right fill-r" 1fr
     / 10% 1fr 1fr 1fr 10% ;
