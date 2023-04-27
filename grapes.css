@@ -315,26 +315,37 @@ Yellow grey fill bg
 }
 
 .pillers{
+    grid-area: pillers;
+    display: grid;
+    grid-template: 
+    "fill imgcontianer imgcontianer imgcontianer fill-r " 100px
+    "fill title text-left text-left fill-r" 1fr
+    / 10% 1fr 1fr 1fr 10% ;
 
 }
 .values{
 
 }
+/*
+Pillars
+   
+*/
+
 
 .core{
     grid-area: core;
     display: grid;
     grid-template:
-    "fill text text text fill-r"
-    "fill pillers . . fill-r"
-    "fill text-left text-left . fill-r"
-    "fill symbols . . fill-r"
-    "fill text-right text-right . fill-r"
-    ;
+    "fill text-left text-left text-left fill-r" 1fr
+   /* "fill gamplay-loop gamplay-loop gamplay-loop fill-r" 1fr*/
+    "pillers pillers pillers pillers pillers" 1fr
+    "fill text-right text-right . fill-r" 1fr
+    / 10% 1fr 1fr 1fr 10% ;
     /*
     My role, what I have done
-    Design pillers design values
     Game Loop img
+    Design pillers design values
+    
     player motivation and progress
     
     */
@@ -349,6 +360,7 @@ Yellow grey fill bg
     padding-left: 20px;
     padding-right: 20px; 
     padding-top: 5%;
+    font-weight: 100;
 }
 
 .ragnarock-grid{
