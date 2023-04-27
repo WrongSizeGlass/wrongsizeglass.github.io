@@ -132,19 +132,16 @@ Yellow grey fill bg
     border: #00ff55 solid;
     grid-area: imgContainer;
     position: relative;
-    grid-area: fill;
     grid-column: auto;
     grid-row: auto ;
     display: flex;
     vertical-align: top;
     display: inline-block;
-    text-align: center;
 }
 .imgContainer-r{
     border: #1f44fd solid;
     grid-area: imgContainer-r;
     position: relative;
-    grid-area: fill;
     grid-column: auto;
     grid-row: auto ;
     display: flex;
