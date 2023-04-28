@@ -3,20 +3,9 @@
     padding: 0;
     font-family: Garamond, serif;
 }
-.center{ text-align:center; }
-.right{ text-align:right; }
+
 .pointer { cursor: pointer; }
 
-.floatleft { float:left; }
-.floatright { float:right; }
-
-.border { border: #999999 1px solid; }
-.bordertop { border-top: #999999 1px solid; }
-.borderbottom { border-bottom: #999999 1px solid; }
-.borderleft { border-left: #999999 1px solid; }
-.borderright { border-right: #999999 1px solid; }
-.hover:hover { background-color: #C1E5B7; }
-.cellpadding { padding:2px; }
 .div{
     vertical-align:middle;
     position: relative;
@@ -25,6 +14,26 @@
 .h1{
     position: relative;
     align-items: center;    
+}
+
+.btn-download{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: auto ;
+    color:#20201f;
+    background: #f28482;
+    padding:20px;
+    border-width:2px ;
+    border-color:#20201f;
+    border-style: solid;
+    font-weight: bold;
+    font-style: 30px;
+}
+
+.btn-download:hover{
+    background: #f1aead;
+    background: #f55f5c;
 }
 
 
@@ -62,6 +71,7 @@ Yellow grey fill bg
     border-style: solid;
     border-width: 1px;
     border-color: #000000;
+    text-decoration:none;
     
 }
 
@@ -123,10 +133,6 @@ Yellow grey fill bg
     justify-content: center;
     
 }
-.bg-games{
-    background: #fdfadc;
-}
-
 
 .imgContainer{
     
@@ -164,8 +170,6 @@ Yellow grey fill bg
     margin-left: 30%;
     left: 0;
     justify-content: left;
-    /*border-radius: 50%;*/
-
 }
 
 .header1{
@@ -215,14 +219,12 @@ Yellow grey fill bg
 }
 
 .fill-r {
-    border: #7c7b7b solid;
     grid-area: fill-r; 
     grid-column: auto;
     grid-row: auto ;
     display: flex;
 }
 .fill{
-    border: #000000 solid;
     grid-area: fill;
     grid-column: 1;
     grid-row: auto ;
@@ -272,38 +274,15 @@ Yellow grey fill bg
     /*background-color: #06b178;*/
 }
 
-.game-grid{
-    display: grid;
-    grid-template: 
-    /*" fill overview imgContainer fill-r"
-    " fill imgContainer involvement fill-r "
-    " fill design-text loop-img fill-r"
-    " fill lvl1 imgContainer fill-r"
-    " fill lvl2 imgContainer fill-r"
-    " fill lvl3 imgContainer fill-r"
-    ;*/
-    " game-content game-content game-content game-content" 1fr
-    " game-content game-content game-content game-content" 1fr
-    " game-content game-content game-content game-content" 1fr
-    " game-content game-content game-content game-content" 1fr
-    / 15% 1fr 1fr 15% ;
-    min-height: 200px;
-}
-
 .game-page{
     grid-area: game-page;
     display: grid;
-    grid-row: auto / span 1;
-    
-    grid-template: /* design - lvl1 - lvl2 - lvl3*/
+    grid-template:
     "fill text-left imgContainer-r fill-r" 550px
     "game-what-is game-what-is game-what-is game-what-is" 500px
-   /* "game-content game-content game-content game-content" 1fr*/
     "game-core game-core game-core game-core" 550px
     "game-content game-content game-content game-content" 1fr
-    "game-roll game-roll game-roll game-roll" 1fr
-    
-    
+    "game-role game-role game-role game-role" 1000px
     / 15% 1fr 1fr 15%    
     ;
     min-height: 400px;
@@ -312,7 +291,7 @@ Yellow grey fill bg
 .game-what-is{
     grid-area: game-what-is;
     display: grid;
-    grid-template: /* design - lvl1 - lvl2 - lvl3*/
+    grid-template:
     "fill title title title  fill-r" 100px 
     "fill imgContainer imgContainer-c imgContainer-r fill-r" 1fr
     "fill text-left text text-right fill-r" 100px
@@ -323,73 +302,29 @@ Yellow grey fill bg
     grid-area: game-core;
     display: grid;
     grid-template:
-   
-   /* "fill gamplay-loop gamplay-loop gamplay-loop fill-r" 1fr*/
     "fill value value value fill-r" 250px
     "fill pillar pillar-desc pillar-desc fill-r" 250px
     / 15% 1fr 1fr 1fr 15% ;
-    /*
-    My role, what I have done
-    Game Loop img
-    Design pillers design values
-    
-    player motivation and progress
-    
-    */
 }
 
-.game-roll{
-    grid-area: game-roll;
+.game-role{
+    grid-area: game-role;
     display: grid;
     grid-template:
-    "fill text-left text-left text-left fill-r" 1fr
-     "fill imgContainer text text fill-r" 1fr
+    "fill text-left text-left text-left fill-r" 300px
+     "fill imgContainer text text fill-r" 700px
      / 15% 1fr 1fr 1fr 15% ;
 }
-
-
-
-/*.game-content{
-    grid-area: game-content;
-    display: grid;
-    grid-column:10% 1fr 1fr 1fr 10% ;
-    grid-template:
-    "fill imgContainer text-left text-left fill-r" 500px
-    "fill text text imgContainer-c fill-r" 400px
-    "fill imgContainer-r text-right text-right fill-r" 500px
-    / 15% 1fr 1fr 1fr 15% ;
-}*/
 
 .game-content{
     grid-area: game-content;
     display: grid;
-    grid-template: /* design - lvl1 - lvl2 - lvl3*/
+    grid-template:
     "fill title title title  fill-r" 100px 
     "fill imgContainer imgContainer-c imgContainer-r fill-r" 1fr
     "fill text-left text text-right fill-r" 300px
     / 10% 1fr 1fr 1fr 10% ;
 }
-
-
-
-.lvl1{
-    grid-area: lvl1;
-    display: grid;
-    grid-template:
-    "fill imgContainer text-left text-left fill-r" 1fr
-    / 10% 1fr 1fr 1fr 10% ;
-}
-
-.nested-img-grids{
-    grid-area: nested-img-grids;
-    display: grid;
-    grid-template:
-    " fill imgContainer-c imgContainer-c img-grid1 fill-r" 400px
-    " fill img-1x2-grid text-left text-left fill-r" 400px
- 
-    / 10% 1fr 1fr 1fr 10% ;
-}
-
 
 /*
 Pillars
