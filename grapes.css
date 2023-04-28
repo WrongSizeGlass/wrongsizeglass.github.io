@@ -299,7 +299,7 @@ Yellow grey fill bg
     "fill text-left imgContainer-r fill-r" 550px
     "game-what-is game-what-is game-what-is game-what-is" 500px
    /* "game-content game-content game-content game-content" 1fr*/
-    "game-core game-core game-core game-core" 600px
+    "game-core game-core game-core game-core" 550px
     "game-content game-content game-content game-content" 1fr
     "game-roll game-roll game-roll game-roll" 1fr
     
@@ -325,8 +325,8 @@ Yellow grey fill bg
     grid-template:
    
    /* "fill gamplay-loop gamplay-loop gamplay-loop fill-r" 1fr*/
-    "fill value value value fill-r" 300px
-    "fill pillar pillar-desc pillar-desc fill-r" 300px
+    "fill value value value fill-r" 250px
+    "fill pillar pillar-desc pillar-desc fill-r" 250px
     / 15% 1fr 1fr 1fr 15% ;
     /*
     My role, what I have done
