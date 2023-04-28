@@ -22,7 +22,7 @@
     display: inline-block;
     width: auto ;
     color:#20201f;
-    background: #f28482;
+    background: #f2c57c;
     padding:20px;
     border-width:2px ;
     border-color:#20201f;
@@ -36,36 +36,18 @@
     background: #f55f5c;
 }
 
-
-/*@media screen and (min-width:736px) {
-    
-}*/
-
-/*
-Yellow grey text bg
-background: #f5eada;
-background: #f5e8d8
-
-Yellow grey fill bg
- background: #e4dac9;
- background: #f2e5d6;
-*/
-
-
-
-
 /*  Grid elements */
 
 .MenuItems{
     width: 25%;
     cursor: pointer;
-    background: #f28482;
+    background: #f2c57c;
     z-index: 1;
     color: #2d2d2d;
     padding: 2px;
     padding-left: 4px;
     padding-right: 4px;
-    bottom: -5px;
+    bottom: -20px;
     position: relative;
     align-items: center;
     border-style: solid;
@@ -79,6 +61,40 @@ Yellow grey fill bg
     color: #2d2d2d;
     background-image: linear-gradient(to top,   rgba(233,237,201,1) 80%, #6b2c89 65%);
 }
+.game-menu {
+    width: fit-content;
+    position: fixed;
+    top: 30%;
+}
+  
+.game-menu a {
+    background-color: #f2c57c; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 10px 5px 10px 5px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    border: #000000 3px solid;
+   
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+  
+.game-menu a:hover {
+    background-color: #cccccc37; /* Dark grey background on mouse-over */
+    color: aliceblue;
+}
+  
+.game-menu a:active {
+    background-color: #04AA6D; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+
+
+
+
 
 
 .header{
@@ -312,7 +328,7 @@ Yellow grey fill bg
     display: grid;
     grid-template:
     "fill text-left text-left text-left fill-r" 300px
-     "fill imgContainer text text fill-r" 700px
+     "fill imgContainer text text fill-r" 750px
      / 15% 1fr 1fr 1fr 15% ;
 }
 
