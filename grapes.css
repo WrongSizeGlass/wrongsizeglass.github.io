@@ -271,11 +271,13 @@
     "game-what-is game-what-is game-what-is game-what-is" 550px
     "game-core game-core game-core game-core" 600px
     "game-content game-content game-content game-content" 900px
-    "game-role game-role game-role game-role" 1000px
+    "game-role game-role game-role game-role" 1fr
+    "footer footer footer footer" 50px
     / 15% 1fr 1fr 15%    
     ;
     min-height: 400px;
 }
+
 
 .game-what-is{
     background: #2c365e; 
@@ -310,7 +312,7 @@
     display: grid;
     grid-template:
     "fill text-left text-left text-left fill-r" 300px
-     "fill imgContainer text text fill-r" 750px
+     "fill imgContainer text text fill-r" 1fr
      / 15% 1fr 1fr 1fr 15% ;
 }
 
