@@ -23,7 +23,7 @@
     display: inline-block;
     width: auto ;
     color:#20201f;
-    background: #f7cf44;
+    background: #e54b4b;
     padding:20px;
     border-width:2px ;
     border-color:#20201f;
@@ -43,7 +43,7 @@
 .MenuItems{
     width: 25%;
     cursor: pointer;
-    background: #f7cf44;
+    background: #e54b4b;
     z-index: 1;
     color: #2d2d2d;
     padding: 2px;
@@ -70,7 +70,7 @@
 }
   
 .game-menu a {
-    background-color: #f7cf44; /* Grey background color */
+    background-color: #e54b4b; /* Grey background color */
     color: black; /* Black text color */
     display: block; /* Make the links appear below each other */
     padding: 10px 5px 10px 5px; /* Add some padding */
