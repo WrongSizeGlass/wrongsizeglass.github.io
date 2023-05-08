@@ -17,28 +17,8 @@
     align-items: center;    
 }
 
-.btn-download{
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    width: auto ;
-    color:#20201f;
-    background: #e54b4b;
-    padding:20px;
-    border-width:2px ;
-    border-color:#20201f;
-    border-style: solid;
-    font-weight: bold;
-    font-style: 30px;
-}
 
-.btn-download:hover{
-
-    background: #ffffff4a;
-    color: #fbfff1;;
-}
-
-/*  Grid elements */
+/*  Main elements */
 
 .MenuItems{
     width: 25%;
@@ -112,153 +92,90 @@
     z-index: 1;
 }
 
-.aboutMe{
-    padding: 20px;
-    font: 30px;
-    grid-area: aboutMe;
-    justify-content: center;
-    
-}
-
-.imgContainer{
-    
-    grid-area: imgContainer;
-    position: relative;
-    grid-column: auto;
-    grid-row: auto ;
-    vertical-align: top;
-    display: inline-block;
-}
-.imgContainer-r{
-    grid-area: imgContainer-r;
-    position: relative;
-    grid-column: auto;
-    grid-row: auto ;
-    display: inline-block;
-}
-.imgContainer-c{
-    grid-area: imgContainer-c;
-    position: relative;
-    grid-column: auto;
-    grid-row: auto ;
-    display: flex;
-}
-
-
-.sidebar{
-    grid-area: sidebar;
-}
-
-
-.profileImg{
-    width: 200px; 
-    height: 200px;
-    margin-left: 30%;
-    left: 0;
-    justify-content: left;
-}
-
-.header1{
-    grid-area: header1;
+.btn-download{
     text-align: center;
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    grid-column: 2 / span 3; 
+    text-decoration: none;
+    display: inline-block;
+    width: auto ;
+    color:#20201f;
+    background: #e54b4b;
+    padding:20px;
+    border-width:2px ;
+    border-color:#20201f;
+    border-style: solid;
+    font-weight: bold;
+    font-style: 30px;
 }
 
-.text{
-    grid-area: text;
- 
-    grid-column: auto;
-    grid-row: auto ;
-    display: flex;
-}
+.btn-download:hover{
 
-.text-left{
-    grid-area: text-left;
-    display: flex;
-    grid-column: 2 /span auto;
-    grid-row:span 1;
-    padding-top: 10%;
-    
+    background: #ffffff4a;
+    color: #fbfff1;;
 }
-
-.text-right{
-    grid-area: text-right;
-    grid-area: fill;
-    grid-column: auto;
-    grid-row: auto ;
-    display: flex;
-    
-}
-
-.sub-header{
-    grid-area: sub-header;
-    text-align: center;
-    padding-top: 35px;
-    display: flex;
-    justify-content: center;
-    grid-column: 2 / span 3;
-    grid-row:  span 1;
-    position: relative; 
-}
-
-.fill-r {
-    grid-area: fill-r; 
-    grid-column: auto;
-    grid-row: auto ;
-    display: flex;
-}
-.fill{
-    grid-area: fill;
-    grid-column: 1;
-    grid-row: auto ;
-    display: flex;
-    
-}
-.transitionColor{
-    grid-area: transitionColor;
-}
-.homepage-transition-bg{
-    background: linear-gradient(180deg, rgba(244,244,213,1) 50%, rgba(253,250,220,1) 60%);
-}
-
 
 /* Grids  */
+.home-page{
+    background: #6f3491;  
+    color: aliceblue;
+    font-size: 25px;
+    grid-area: game-page;
+    display: grid;
+    grid-template:
+    "fill aboutMe aboutMe fill-r" 1fr
+    "hGame hGame hGame hGame" 1fr
+    "whatIbring whatIbring whatIbring whatIbring" 1fr
+    "hGame hGame hGame hGame" 1fr
+    "tools tools tools tools" 1fr
+    "hGame hGame hGame hGame" 1fr
+    "contact contact contact contact" 1fr
+    "footer footer footer footer" 50px
+    / 15% 1fr 1fr 15%    
+    ;
+    min-height: 400px;
 
-.main-grid{
-    display: grid;
-    grid-template:       /* Height*/
-    " header header header  " 150px
-    " homepage-content-grid homepage-content-grid homepage-content-grid " 1fr
-    " footer footer footer " 150px
-    / 20% 1fr 15% ;         /*Width*/ 
-     
 }
-.homepage-content-grid{
-    grid-area: homepage-content-grid;
-    padding-top: 2.5%;
-    padding-left: 30px;
-    min-height: fit-content;
-    font-size: 15px;
-    color: #1e1d1d;
+.hGame{
+    grid-area: "hGame";
     display: grid;
+    grid-row: auto;
     grid-template: 
-    "fill imgContainer aboutMe fill-r" 400px /* height */
-    " fill text img-thumbnail-grid fill-r" 1fr
-    /  15% 1fr 1fr 15%; /* width*/
-
-    /* Good colors but not good to text mainly greenish
-    background: linear-gradient(90deg, rgba(83,141,34,1) 0%, rgba(115,169,66,1) 15%, rgba(170,213,118,1) 50%, rgba(115,169,66,1) 85%, rgba(83,141,34,1) 100%);
-    background: linear-gradient(90deg, rgba(26,117,159,1) 0%, rgba(82,182,154,1) 10%, rgba(52,160,164,1) 50%, rgba(82,182,154,1) 90%, rgba(26,117,159,1) 100%);*/
-    /* good grey */
-    /* background-color: #b6b6b6;*/
-    /* good Yellow */
-    /*background-color: #f4bb71;*/
-    /*good green for light purple*/
-    /*background-color: #06b178;*/
+    " fill text imgContainer fill-r ";
 }
+.whatIbring{
+    grid-area: "whatIbring";
+    display: grid;
+    grid-row: auto;
+    grid-template: 
+    " fill title title title title title title title title fill-r " 50px
+    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 100px
+    " fill text text text text text text text text fill-r " 50px
+    / 10% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%
+    ;
+}
+
+.tools{
+    grid-area: "tools";
+    display: grid;
+    grid-row: auto;
+    grid-template: 
+    " fill title title title title title title title title fill-r " 50px
+    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 100px
+    " fill text text text text text text text text fill-r " 50px
+    / 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%
+    ;
+}
+
+.contact{
+    grid-area: "contact";
+    display: grid;
+    grid-row: auto;
+    grid-template: 
+    " fill title title fill-r "50px
+    " fill text text fill-r" 100px
+    " fill text-left text-right fill-r" 150px
+    / 1fr 1fr 1fr 1fr ;
+}
+
 
 .game-page{
     background: #6f3491;  
@@ -277,7 +194,6 @@
     ;
     min-height: 400px;
 }
-
 
 .game-what-is{
     background: #2c365e; 
@@ -330,10 +246,85 @@
     / 10% 1fr 1fr 1fr 10% ;
 }
 
-/*
-Pillars
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
-*/
+/*  text elements  */
+.aboutMe{
+    padding: 20px;
+    font: 30px;
+    grid-area: aboutMe;
+    justify-content: center;
+    
+}
+
+.text-left{
+    grid-area: text-left;
+    display: flex;
+    grid-column: 2 /span auto;
+    grid-row:span 1;
+    padding-top: 10%;
+    
+}
+
+.text-right{
+    grid-area: text-right;
+    grid-area: fill;
+    grid-column: auto;
+    grid-row: auto ;
+    display: flex;
+    
+}
+.text{
+    grid-area: text;
+ 
+    grid-column: auto;
+    grid-row: auto ;
+    display: flex;
+}
+
+/* img containers*/
+.imgContainer{
+    
+    grid-area: imgContainer;
+    position: relative;
+    grid-column: auto;
+    grid-row: auto ;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.imgContainer-r{
+    grid-area: imgContainer-r;
+    position: relative;
+    grid-column: auto;
+    grid-row: auto ;
+    display: inline-block;
+}
+
+.imgContainer-c{
+    grid-area: imgContainer-c;
+    position: relative;
+    grid-column: auto;
+    grid-row: auto ;
+    display: flex;
+}
+
+/* fillers */
+.fill-r {
+    grid-area: fill-r; 
+    grid-column: auto;
+    grid-row: auto ;
+    display: flex;
+}
+
+.fill{
+    grid-area: fill;
+    grid-column: 1;
+    grid-row: auto ;
+    display: flex;
+    
+}
+
+/* desing pillar / values*/
+
 .pillar{
     grid-area: pillar;
 
@@ -367,7 +358,7 @@ Pillars
     margin-left: 50px;
 }
 
-
+/* one liners */
 
 .title{    
     grid-area: title;
@@ -381,230 +372,3 @@ Pillars
     font-weight: 100;
 }
 
-.ragnarock-grid{
-    display: grid;
-    grid-template:        /* Height*/
-    " header header header  " 200px
-    " ragna-content-grid ragna-content-grid ragna-content-grid" 1fr
-    " footer footer footer " 200px
-    / 20% 1fr 15% ;         /*Width*/ 
-}
-
-.ragna-content-grid{
-    grid-area: ragna-content-grid;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    min-height: fit-content;
-    font-size:20px;
-    color:#1e1d1d;
-    
-    display: grid;
-    grid-template:                   /* Height*/
-    "fill text img-grid1 img-grid1 fill-r" 20%
-    "fill sub-header  sub-header sub-header fill-r" 5%
-    "fill img-grid2 img-grid2 right-text fill-r" 30%
-    "fill header1 header1 header1 fill-r" 5%
-    " video-grid video-grid video-grid video-grid  video-grid" 1fr
-    / 1fr 35% 1fr 35% 1fr ;           /*Width*/ 
-}
-
-
-/*  Media grids  */
-
-.img-thumbnail-grid{
-    grid-area: img-thumbnail-grid;
-    display: grid;
-    
- 
-    grid-template: 
-    " img-grid-right" 300px
-
-    " img-grid-right" 300px
-    
-    " img-grid-right" 300px
-    
-    / 600px ; 
-}
-
-
-.img-grid-right{
-    grid-area: img-grid-right;
-    display: grid;
-    grid-row: auto/span 1;
-    padding-top: 20px;
-    grid-template: 
-    " tl-img tr-img" 138px
-    " bl-img br-img" 138px
-    " .           ."  24px
-    / 300px 300px ; 
-    
-}
-
-.img-grid1{
-    
-    grid-area: img-grid1;
-    display: grid;
-    padding-top: 20px;
-    
-    grid-template: 
-    " tl-img tr-img" 200px
-    " bl-img br-img" 200px
-    / 300px 300px ;   
-}
-
-.img-grid2{
-    
-    grid-area: img-grid2;
-    display: grid;
-    padding-top: 10px;
-    
-    grid-template: 
-    " tl-img tr-img" 300px
-    " bl-img br-img" 300px
-    / 300px 300px ;
-}
-
-.img-1x2-grid{
-    grid-area: img-1x2-grid;
-    display: grid;
-    padding-top: 10px;   
-    grid-template: 
-    " tl-img ." 300px
-    " bl-img br-img" 300px
-    / 300px 300px ;
-}
-
-.video-grid{
-    grid-area: video-grid;
-    
-    grid-template-columns: 10% 1fr 1fr 10%;
-    display: grid;
-    grid-template: 
-    "fill text-left video-right fill" 1fr
-    "fill video-right text-left  fill" 1fr
-    "fill text-left video-right fill" 1fr
-    / 1fr 1fr 1fr 1fr ;  
-}
-
-
-/*  Media classes  */
-
-.video-right{
-    
-    grid-area: video-right;
-    display: flex;
-    grid-column: 3;
-    grid-row: auto;
-    padding-left: 5%;
-    padding-top: 50px; 
-}
-
-.video-size{
-    height: 300px;
-    width: 500px;   
-}
-
-.tl-img{
-    grid-area: tl-img;
-    margin-bottom: 2px;
-   
-}
-
-.tr-img{
-    grid-area: tr-img;
-    margin-bottom: 2px;
-   
-}
-
-.bl-img{
-    grid-area: bl-img;
-}
-
-.br-img{
-    grid-area: br-img;   
-}
-
-.wh-img{
-    width: 300px;
-    height: 138px;
-}
-.square-img{
-    width: 300px;
-    height: 300px;
-}
-
-/* Color Classes  */
-/*.MainBg{
-    
-    background: #03346f;
-    
-    
-    
-    background: #143601;
-    background-color: #99c1b9;
-    margin: 0px;
-
-    background: #036666;
-    background: #036666;
-    background:#2c3a4e ;
-    background: #283c55;
-    background: #142233;
-}*/
-
-.start-fill-l{
-    background: linear-gradient(90deg, rgba(192,209,171,1) 98.75%, rgba(238,251,224,1) 100%);
-}
-.start-fill-r{
-    background: linear-gradient(90deg, rgba(238,251,224,1) 0%, rgba(192,209,171,1) 1.25%);  
-}
-
-.lBlue-header{
-    font:bold;
-    background: linear-gradient(180deg, rgba(238,251,224,1) 0%, rgba(152,202,220,1) 1.25%, rgba(152,202,220,1) 98.25%, rgba(227,239,255,1) 100%);
-}
-.lBlue-header-fill{
-    background: linear-gradient(180deg, rgba(192,209,171,1) 0%, rgba(152,202,220,1) 1.25%, rgba(152,202,220,1) 98.25%, rgba(189,212,238,1) 100%); 
-}
-.lBlue-fill-l{
-    background: linear-gradient(90deg, rgb(227, 237, 250) 98.75%, rgba(227,239,255,1) 100%);
-}
-.lBlue-fill-r{
-/*background: linear-gradient(90deg, rgba(227,239,255,1) 0%, rgba(189,212,238,1) 1.25%);*/
-background: linear-gradient(90deg, rgba(227,239,255,1) 0%, rgba(227, 237, 250) 1.25%);
-}
-
-.text-bg{
-     background: #fefefa;
-     background: #f5ebe0;
-}
-
-.lRed-header{
-    font:bold;
-    background: #98cadc;
-    background: #f2b5b5;
-    
-    background: #e4c4a5;
-    background: #ff9970;
-    background: #f2b5b5;
-    background: linear-gradient(180deg, rgba(189,212,238,1) 0%, rgba(242,181,181,1) 2%, rgba(242,181,181,1) 98%, rgba(252,231,231,1) 100%);
-    background: #a9b6c9;
-    background: #cdb4db;
-    background: #dec8e5;
-   
-}
-
-
-.lRed-header-fill{
-    background: linear-gradient(180deg, rgba(189,212,238,1) 0%, rgba(242,181,181,1) 2%, rgba(242,181,181,1) 98%, rgba(252,231,231,1) 100%);
-   background: #dec8e5;
- 
-}
-.lRed-fill-l{
-   /* background: linear-gradient(90deg, rgba(254,207,207,1) 98%, rgba(252,231,231,1) 100%);*/
-    background: linear-gradient(90deg, rgba(254, 221, 221,1) 98%, rgba(252,231,231,1) 100%);
-    background: #f0d6e4;
-}
-.lRed-fill-r{
-    background: linear-gradient(90deg, rgba(252,231,231,1) 0%, rgba(254, 221, 221,1) 1.25%);
-    background: #f0d6e4;
-}
