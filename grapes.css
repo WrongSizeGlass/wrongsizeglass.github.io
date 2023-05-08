@@ -92,6 +92,8 @@
     z-index: 1;
 }
 
+
+
 .btn-download{
     text-align: center;
     text-decoration: none;
@@ -121,49 +123,89 @@
     grid-area: game-page;
     display: grid;
     grid-template:
-    "fill aboutMe aboutMe fill-r" 1fr
-    "hGame hGame hGame hGame" 1fr
-    "whatIbring whatIbring whatIbring whatIbring" 1fr
-    "hGame hGame hGame hGame" 1fr
-    "tools tools tools tools" 1fr
-    "hGame hGame hGame hGame" 1fr
-    "contact contact contact contact" 1fr
-    "footer footer footer footer" 50px
-    / 15% 1fr 1fr 15%    
+    "subheader subheader  subheader subheader subheader" 200px
+    "hGame hGame hGame hGame hGame" 1fr
+    "skills skills skills skills skills" 200px
+    "hGame hGame hGame hGame hGame" 1fr
+    "skills skills skills skills skills" 200px
+    "hGame hGame hGame hGame hGame" 1fr
+    "contact contact contact contact contact" 200px
+    "footer footer footer footer footer" 50px
+    / 15% 1fr 1fr 1fr 15%    
     ;
     min-height: 400px;
-
 }
-.hGame{
+
+.subheader{
+    color: aliceblue;
+    background:  #6f3491;
+    padding-top: 50px;
+
     grid-area: "hGame";
     display: grid;
     grid-row: auto;
     grid-template: 
-    " fill text imgContainer fill-r ";
+    "fill aboutMe aboutMe fill-r" 350px
+    / 15% 1fr 1fr 15%;
+
+}
+
+
+.hGame{
+    color: aliceblue;
+    background:  #6f3491;
+    padding-top: 50px;
+
+    grid-area: "hGame";
+    display: grid;
+    grid-row: auto;
+    grid-template: 
+    "fill text imgContainer fill-r" 350px
+    / 15% 1fr 1fr 15%;
 }
 .whatIbring{
+    color: aliceblue;
     grid-area: "whatIbring";
     display: grid;
     grid-row: auto;
     grid-template: 
     " fill title title title title title title title title fill-r " 50px
-    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 100px
+    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 150px
+    / 10% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%
+    ;
+}
+.skills{
+    background: #2c365e; 
+    color: aliceblue;
+    grid-area: "skills";
+    display: grid;
+    grid-row: auto;
+    grid-template: 
+    " fill title title title title title title title title fill-r " 50px
+    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 150px
     / 10% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%
     ;
 }
 
 .tools{
+    color: aliceblue;
     grid-area: "tools";
     display: grid;
     grid-row: auto;
     grid-template: 
     " fill title title title title title title title title fill-r " 50px
-    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 100px
+    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 150px
     / 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%
     ;
 }
+.pad-top-left{
+    padding-top: 5.5%;
+    padding-left: 35%;
+}
 
 .contact{
+    background: #2c365e; 
+    color: aliceblue;
     grid-area: "contact";
     display: grid;
     grid-row: auto;
@@ -246,8 +288,7 @@
 
 /*  text elements  */
 .aboutMe{
-    padding: 20px;
-    font: 30px;
+    background:  #6f3491;
     grid-area: aboutMe;
     justify-content: center;
     
@@ -369,4 +410,7 @@
     padding-top: 5%;
     font-weight: 100;
 }
-
+.icons{
+    width: 50px;
+    height: 50px;
+}
