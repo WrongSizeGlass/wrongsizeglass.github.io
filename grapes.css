@@ -20,6 +20,67 @@
 
 /*  Main elements */
 
+.btn-download{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: auto ;
+    color:#20201f;
+    background: #e54b4b;
+    padding:20px;
+    border-width:2px ;
+    border-color:#20201f;
+    border-style: solid;
+    font-weight: bold;
+    font-style: 30px;
+}
+
+.btn-download:hover{
+
+    background: #ffffff4a;
+    color: #fbfff1;;
+}
+
+
+.btns-head{
+    cursor: pointer;
+    background: #e54b4b;
+    z-index: 1;
+    color: #2d2d2d;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    text-decoration:none;
+    display: inline-block;
+    align-items: center;
+    padding: 10px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    top: 15px;    
+}
+
+.home-btn{
+    padding:20px;
+    cursor: pointer;
+    background: #952828;
+    z-index: 1;
+    color: #ede9e9;
+    position: relative;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    text-decoration:none;
+}
+.home-btn:hover{
+    background: #00000022;
+    border-color: #dfdbdb;
+}
+
+
+
 .MenuItems{
     width: 25%;
     cursor: pointer;
@@ -78,6 +139,8 @@
     background: #50154b;
 }
 
+
+
 .footer{
     grid-area: footer;
     text-align: center;  
@@ -94,27 +157,6 @@
 
 
 
-.btn-download{
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    width: auto ;
-    color:#20201f;
-    background: #e54b4b;
-    padding:20px;
-    border-width:2px ;
-    border-color:#20201f;
-    border-style: solid;
-    font-weight: bold;
-    font-style: 30px;
-}
-
-.btn-download:hover{
-
-    background: #ffffff4a;
-    color: #fbfff1;;
-}
-
 /* Grids  */
 .home-page{
     background: #6f3491;  
@@ -123,57 +165,21 @@
     grid-area: game-page;
     display: grid;
     grid-template:
-    "subheader subheader  subheader subheader subheader" 200px
-    "hGame hGame hGame hGame hGame" 1fr
-    "skills skills skills skills skills" 200px
-    "hGame hGame hGame hGame hGame" 1fr
-    "skills skills skills skills skills" 200px
-    "hGame hGame hGame hGame hGame" 1fr
-    "contact contact contact contact contact" 200px
-    "footer footer footer footer footer" 50px
-    / 15% 1fr 1fr 1fr 15%    
+    "home-header" 50px
+    "subheader " 200px
+    "hGame " 1fr
+    "skills " 200px
+    "hGame " 1fr
+    "skills" 200px
+    "hGame" 1fr
+    "contact " 200px
+    "footer " 200px
+    / 1fr    
     ;
     min-height: 400px;
 }
 
-.subheader{
-    color: aliceblue;
-    background:  #6f3491;
-    padding-top: 50px;
 
-    grid-area: "hGame";
-    display: grid;
-    grid-row: auto;
-    grid-template: 
-    "fill aboutMe aboutMe fill-r" 350px
-    / 15% 1fr 1fr 15%;
-
-}
-
-
-.hGame{
-    color: aliceblue;
-    background:  #6f3491;
-    padding-top: 50px;
-
-    grid-area: "hGame";
-    display: grid;
-    grid-row: auto;
-    grid-template: 
-    "fill text imgContainer fill-r" 350px
-    / 15% 1fr 1fr 15%;
-}
-.whatIbring{
-    color: aliceblue;
-    grid-area: "whatIbring";
-    display: grid;
-    grid-row: auto;
-    grid-template: 
-    " fill title title title title title title title title fill-r " 50px
-    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 150px
-    / 10% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%
-    ;
-}
 .skills{
     background: #2c365e; 
     color: aliceblue;
@@ -187,17 +193,6 @@
     ;
 }
 
-.tools{
-    color: aliceblue;
-    grid-area: "tools";
-    display: grid;
-    grid-row: auto;
-    grid-template: 
-    " fill title title title title title title title title fill-r " 50px
-    " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 150px
-    / 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%
-    ;
-}
 .pad-top-left{
     padding-top: 5.5%;
     padding-left: 35%;
@@ -286,11 +281,54 @@
     / 10% 1fr 1fr 1fr 10% ;
 }
 
+/* Rows */
+.home-header{
+    color: aliceblue;
+    background: #50154b;
+    display: table-row;
+    grid-area: "home-header";
+   display: grid;
+    grid-template: 
+    "fill-r text-left fill fill fill btns-head" 75px
+    
+    / 5% 15% 1fr 1fr 1fr 15%;
+
+}
+
+
+
+.subheader{
+    color: aliceblue;
+    background:  #6f3491;
+    padding-top: 10px;
+    grid-area: "hGame";
+    display: grid;
+    grid-row: auto;
+    grid-template: 
+    "fill aboutMe aboutMe fill-r" 150px
+    / 15% 1fr 1fr 15%;
+
+}
+
+.hGame{
+    color: aliceblue;
+    background:  #6f3491;
+    padding-top: 25px;
+    grid-area: "hGame";
+    display: grid;
+    grid-row: auto;
+    grid-template: 
+    "fill text imgContainer fill-r" 325px
+    / 15% 1fr 1fr 15%;
+}
+
+
 /*  text elements  */
 .aboutMe{
     background:  #6f3491;
     grid-area: aboutMe;
-    justify-content: center;
+    justify-self: center;
+    padding-left: 15%;
     
 }
 
