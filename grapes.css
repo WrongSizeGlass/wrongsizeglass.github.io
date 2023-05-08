@@ -148,7 +148,6 @@
     grid-template: 
     " fill title title title title title title title title fill-r " 50px
     " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 100px
-    " fill text text text text text text text text fill-r " 50px
     / 10% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%
     ;
 }
@@ -160,7 +159,6 @@
     grid-template: 
     " fill title title title title title title title title fill-r " 50px
     " fill imgContainer imgContainer imgContainer imgContainer imgContainer imgContainer fill-r " 100px
-    " fill text text text text text text text text fill-r " 50px
     / 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%
     ;
 }
