@@ -55,7 +55,7 @@
     display: inline-block;
     align-items: center;
     padding: 10px;
-    height: 30px;
+    height: calc((30 / 1280) * 100vh);
     position: relative;
     text-align: center;
     top: 15px;    
@@ -82,7 +82,7 @@
 
 
 .MenuItems{
-    width: 25%;
+    width: 25vw;
     cursor: pointer;
     background: #e54b4b;
     z-index: 1;
@@ -147,9 +147,9 @@
     padding-top: 25px;
     background: #50154b;
     color: #ded8dc;
-    position: fixed;
-    height: 50px;
-    width: 100%;
+   
+    height: calc((70 / 1280) * 100vh);
+    width: 100vw;
     bottom: 0%;
     font-size: 25px;
     z-index: 1;
@@ -162,7 +162,7 @@
     background: #6f3491;  
     color: aliceblue;
     font-size: 25px;
-    grid-area: game-page;
+    grid-area: home-page;
     display: grid;
     grid-template:
     "home-header" 50px
@@ -212,23 +212,22 @@
 }
 
 
-.game-page{
-    background: #6f3491;  
+.game-page {
+    background: #6f3491;
     color: aliceblue;
     font-size: 25px;
     grid-area: game-page;
     display: grid;
-    grid-template:
-    "fill text-left imgContainer-r fill-r" 550px
-    "game-what-is game-what-is game-what-is game-what-is" 550px
-    "game-core game-core game-core game-core" 600px
-    "game-content game-content game-content game-content" 900px
-    "game-role game-role game-role game-role" 1fr
-    "footer footer footer footer" 50px
-    / 15% 1fr 1fr 15%    
-    ;
-    min-height: 400px;
-}
+    grid-template-columns: 15% 1fr 1fr 15%;
+    grid-template-rows: auto auto auto auto auto  auto;
+    grid-template-areas:
+      "fill text-left imgContainer-r fill-r"
+      "game-what-is game-what-is game-what-is game-what-is"
+      "game-core game-core game-core game-core"
+      "game-content game-content game-content game-content"
+      "game-role game-role game-role game-role"
+      "footer footer footer footer";
+  }
 
 .game-what-is{
     background: #2c365e; 
@@ -236,49 +235,58 @@
     font-size: 25px;
     grid-area: game-what-is;
     display: grid;
-    grid-template:
-    "fill title title title  fill-r" 100px 
-    "fill imgContainer imgContainer-c imgContainer-r fill-r" 1fr
-    "fill text-left text text-right fill-r" 150px
-    / 10% 1fr 1fr 1fr 10% ;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    grid-template-rows: auto auto auto; 
+    grid-template-areas:
+    "fill title title title  fill-r"  
+    "fill imgContainer imgContainer-c imgContainer-r fill-r" 
+    "fill text-left text text-right fill-r";
 }
 
-.game-core{
+.game-core {
     background: #6f3491;
     color: aliceblue;
     font-size: 25px;
+    padding-bottom: 2%;
     grid-area: game-core;
     display: grid;
-    grid-template:
-    "fill value value value fill-r" 250px
-    "fill pillar pillar-desc pillar-desc fill-r" 300px
-    / 15% 1fr 1fr 1fr 15% ;
-}
-
-.game-role{
-    background: #6f3491; 
+    grid-template-columns: 15% 1fr 1fr 1fr 15%;
+    grid-template-rows: auto auto; 
+    grid-template-areas:
+      "fill value value value fill-r"
+      "fill pillar pillar-desc pillar-desc fill-r";
+     
+  }
+  
+  .game-role {
+    
+    background: #6f3491;
     color: aliceblue;
     font-size: 25px;
+    padding-bottom: 2%;
     grid-area: game-role;
     display: grid;
-    grid-template:
-    "fill text-left text-left text-left fill-r" 300px
-     "fill imgContainer text text fill-r" 1fr
-     / 15% 1fr 1fr 1fr 15% ;
-}
+    grid-template-columns: 15% 1fr 1fr 15%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "fill text-left text-left fill-r"
+      "fill imgContainer text  fill-r";
+  }
+  
 
 .game-content{
     background: #2c365e; 
     color: aliceblue;
     font-size: 25px;
+    padding-bottom: 2%;
     grid-area: game-content;
     display: grid;
-   
-    grid-template:
-    "fill title title title  fill-r" 100px 
-    "fill imgContainer imgContainer-c imgContainer-r fill-r" 1fr
-    "fill text-left text text-right fill-r" 750px
-    / 10% 1fr 1fr 1fr 10% ;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "fill title title title  fill-r"
+    "fill imgContainer imgContainer-c imgContainer-r fill-r"
+    "fill text-left text text-right fill-r" ;
 }
 
 /* Rows */
@@ -289,13 +297,11 @@
     grid-area: "home-header";
    display: grid;
     grid-template: 
-    "fill-r text-left fill fill fill btns-head" 75px
+    "fill-r text-left fill fill fill btns-head" calc((105 / 1280) * 100vh) 
     
     / 5% 15% 1fr 1fr 1fr 15%;
 
 }
-
-
 
 .subheader{
     color: aliceblue;
@@ -305,7 +311,7 @@
     display: grid;
     grid-row: auto;
     grid-template: 
-    "fill aboutMe aboutMe fill-r" 150px
+    "fill aboutMe aboutMe fill-r" calc((350 / 1280) * 100vh) 
     / 15% 1fr 1fr 15%;
 
 }
@@ -318,12 +324,13 @@
     display: grid;
     grid-row: auto;
     grid-template: 
-    "fill text imgContainer fill-r" 325px
+    "fill text imgContainer fill-r" calc((550 / 1280) * 100vh) 
     / 15% 1fr 1fr 15%;
 }
 
 
 /*  text elements  */
+
 .aboutMe{
     background:  #6f3491;
     grid-area: aboutMe;
@@ -384,56 +391,56 @@
     display: flex;
 }
 
-/* fillers */
-.fill-r {
-    grid-area: fill-r; 
-    grid-column: auto;
-    grid-row: auto ;
-    display: flex;
-}
-
-.fill{
+ /* fillers */
+ .fill-r {
+    grid-area: fill-r;
+  }
+  
+  .fill {
     grid-area: fill;
-    grid-column: 1;
-    grid-row: auto ;
-    display: flex;
-    
-}
-
-/* desing pillar / values*/
-
-.pillar{
+  }
+  
+  /* design pillar / values */
+  .pillar {
     grid-area: pillar;
-
-}
-.pillar img{
-    padding-left: 40%;
-    width: 50px;
-}
-.pillar h2{
-    width: 85%;
-    margin-left: 50px;
-}
-.pillar-desc{
-    font-size: 25px;
+  }
+  
+  .pillar-desc {
     padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 3%;
-    top:-50px
-}
+    grid-area: pillar-desc;
+  }
+  
+  .value {
+    grid-area: value;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  
+  .value:nth-child(2) {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  
+  .value:nth-child(3) {
+    padding-left: 10%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
 
-.value{
-    padding-top: 8%;
+  .vp {
+    width: calc((70 / 1920) * 100vw);
+    padding-bottom: 2vh;
+    padding-right: 5vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 
-}
-.value img{
-    padding-left: 40%;
-    width: 50px;
-}
-.value h2{
-    width: 85%;
-    margin-left: 50px;
-}
+  }
+  .roll-icon{
+    width: calc((70 / 1920) * 100vw);
+  }
 
 /* one liners */
 
@@ -448,7 +455,87 @@
     padding-top: 5%;
     font-weight: 100;
 }
-.icons{
-    width: 50px;
-    height: 50px;
+
+.imgHomeThumbnail{
+    width: calc((700 / 1920) * 100vw);
+    height: calc((500 / 1280) * 100vh);
 }
+
+.icons{
+    width: calc((70 / 1920) * 100vw);
+    height: calc((70 / 1280) * 100vh); 
+}
+
+.video-size{
+    border: 2px solid #20201f;
+    cursor: pointer;
+    width: calc((700 / 1920) * 100vw);
+    height: calc((500 / 1280) * 100vh); 
+    transition: filter 0.4s ease;
+}
+.video-size:hover{
+    filter: brightness(130%);
+}
+.video-size-row{
+    border: 5px solid #20201f;
+    cursor: pointer;
+    width: calc((500 / 1920) * 100vw);
+    height: calc((500 / 1280) * 100vh); 
+}
+.img-thumbnail-size{
+    border: 5px solid #20201f;
+    cursor: pointer;
+    width: calc((700 / 1920) * 100vw);
+    height: calc((500 / 1280) * 100vh); 
+}
+.img-size-row{
+    width: calc((500 / 1920) * 100vw);
+    height: calc((500 / 1280) * 100vh); 
+}
+.img-level{
+    width: calc((500 / 1920) * 100vw);
+    height: calc((500 / 1280) * 100vh);  
+}
+.img-level-pair{
+    width: calc((500 / 1920) * 100vw);
+    height: calc((250 / 1280) * 100vh);  
+}
+.img-features{
+    width: calc((700 / 1920) * 100vw);
+    height: calc((900 / 1280) * 100vh);  
+}
+
+
+#player {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+  }
+  
+#player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+    
+}
+.video-container {
+    
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+    height: 0;
+  }
+  
+  .video {
+   
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+  
